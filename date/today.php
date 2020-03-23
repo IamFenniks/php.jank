@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="ru">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Сегодняшняя дата</title>
+        <?php
+            $title = 'Сегодняшняя дата';
+            include '../head.html.php'
+        ?>
     <body>
+        <?php include '../nav.html.php';?>
 
         <!--<?php require '../index.php';?>-->
 
-        <p>Ctгодняшняя дата (согласно данному веб-серверу):
+        <p>Cегодняшняя дата (согласно данному веб-серверу):
             <?php
                 echo date('l, F jS Y.');
                 echo '<br>';
@@ -36,6 +36,8 @@
                 echo 'День рождения Стефани: ' . $birth_day['Стефани'];
             ?>
         </p>
+
+        <?php include '../footer.html.php'; ?>
     </body>
 </html>
  

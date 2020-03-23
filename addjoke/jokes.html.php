@@ -12,11 +12,21 @@
     <p>Вот все шутки, которые есть в Базе Данных:</p>
 
         <?php foreach ($jokes as $i => $joke): ?>
-            <blockquote>
-                <p>
-                    <?php echo ++$i . '. ' . htmlspecialchars($joke, ENT_QUOTES, 'UTF-8'); ?>
-                </p>
-            </blockquote>
+            <form action="?delete_joke" method="post">
+                <blockquote>
+                    <p>
+                        <?php
+                            echo ++$i . '. ' . htmlspecialchars($joke['text'], ENT_QUOTES, 'UTF-8');
+                            echo '<br> (автор: <a href="mailto:" ' . htmlspecialchars($joke['auth_email'], ENT_QUOTES, 'UTF-8') .
+                            '">' . htmlspecialchars($joke['auth_name'], ENT_QUOTES, 'UTF-8') . '</a>)<br>';
+                        ?>
+
+                        <input type="hidden" name="id" value="<?php echo $joke['id'] ; ?>">
+                        <input type="submit" value="Удалить">
+                    </p>
+                </blockquote>
+            </form>
+
         <?php endforeach; ?>
     </body>
 </html>

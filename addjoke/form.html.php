@@ -20,7 +20,7 @@
             <form action="<?php // echo $_SERVER['PHP_SELF']; ?>"> Обрабатывается сдесь же
             <form action="?"> Возврашаемтся на сценарий, с которого форма была вызвана
             <form action="?"> Возврашаемтся на сценарий, с которого форма была вызвана с использованием:
-                if(isset($_GIT['addjoke'])) И
+                if(isset($_GET['addjoke'])) И
                 <a href="?addjoke">
         -->
         <form action="?" method="post">
@@ -28,7 +28,7 @@
                 <label for="joketext">Введите сюда свою шутку:</label>
                 <textarea name="joketext" id="joketext" cols="30" rows="10"></textarea>
             </div>
-            <div><input type="submit"></div>
+            <div><input type="submit" value="Добавить"></div>
         </form>
     </body>
 </html>
