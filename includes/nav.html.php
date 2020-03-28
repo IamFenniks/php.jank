@@ -8,9 +8,9 @@
             <div class="header">
                 <nav class="navbar">
                     <ul>
-                        <li><a href="addjoke/index.php">AddJoke</a></li>
-                        <li><a href="date/today.php">Date</a></li>
-                        <li><a href="wellcome/index.php">Wellcome</a></li>
+                        <li><a href="../addjoke/index.php">AddJoke</a></li>
+                        <li><a href="../date/today.php">Date</a></li>
+                        <li><a href="../wellcome/index.php">Wellcome</a></li>
                         <li><a href=""></a></li>
                         <li><a href=""></a></li>
                     </ul>

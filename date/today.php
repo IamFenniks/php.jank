@@ -3,12 +3,12 @@
     <head>
         <?php
             $title = 'Сегодняшняя дата';
-            include '../head.html.php'
+        include '../head.html.php'
         ?>
     <body>
         <?php include '../nav.html.php';?>
 
-        <!--<?php require '../index.php';?>-->
+        <!--<?php require '../index.html.php';?>-->
 
         <p>Cегодняшняя дата (согласно данному веб-серверу):
             <?php

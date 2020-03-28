@@ -1,6 +1,5 @@
 <?php
-    include '../db.inc.php';
-
+//    include_once '../includes/db.inc.php';
     try{
         $sql = 'SELECT id, joketext, author_name, author_email ' .
             'FROM jokes INNER JOIN author ' .
@@ -24,6 +23,8 @@
     }
 
     if(isset($_POST['joketext'])){
+        
+
         try{
             $joketext = $_POST['joketext'];
 
@@ -54,6 +55,8 @@
     }
 
     if(isset($_GET['delete_joke'])){
+        
+
         try{
             $sql = 'DELETE FROM jokes WHERE id = :id';
             $s = $pdo->prepare($sql);
@@ -75,7 +78,8 @@
     include 'output.html.php';
 
     include 'jokes.html.php';
-if(isset($_GET['addjoke'])){
-    include 'form.html.php';
-    exit();
-}
+
+    if(isset($_GET['addjoke'])){
+        include 'form.html.php';
+        exit();
+    }
