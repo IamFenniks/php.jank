@@ -1,5 +1,5 @@
 <?php
-//    include_once '../includes/db.inc.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
     try{
         $sql = 'SELECT id, joketext, author_name, author_email ' .
             'FROM jokes INNER JOIN author ' .
@@ -23,7 +23,7 @@
     }
 
     if(isset($_POST['joketext'])){
-        
+        include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
         try{
             $joketext = $_POST['joketext'];
@@ -55,7 +55,7 @@
     }
 
     if(isset($_GET['delete_joke'])){
-        
+        $_SERVER['DOCUMENT_ROOT'] . '/db.inc.php';
 
         try{
             $sql = 'DELETE FROM jokes WHERE id = :id';

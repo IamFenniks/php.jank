@@ -3,12 +3,11 @@
     <head>
         <?php
             $title = 'Сегодняшняя дата';
-        include '../head.html.php'
+        include $_SERVER['DOCUMENT_ROOT'] . '/assets/head.html.php';
         ?>
+    </head>
     <body>
-        <?php include '../nav.html.php';?>
-
-        <!--<?php require '../index.html.php';?>-->
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/nav.html.php';?>
 
         <p>Cегодняшняя дата (согласно данному веб-серверу):
             <?php
@@ -37,7 +36,7 @@
             ?>
         </p>
 
-        <?php include '../footer.html.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/footer.html.php'; ?>
     </body>
 </html>
  
