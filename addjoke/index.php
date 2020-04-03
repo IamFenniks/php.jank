@@ -1,5 +1,6 @@
 <?php
     include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+
     try{
         $sql = 'SELECT id, joketext, author_name, author_email ' .
             'FROM jokes INNER JOIN author ' .

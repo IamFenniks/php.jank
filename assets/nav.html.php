@@ -11,7 +11,7 @@
                         <li><a href="../addjoke/index.php">AddJoke</a></li>
                         <li><a href="../date/today.php">Date</a></li>
                         <li><a href="../wellcome/index.php">Wellcome</a></li>
-                        <li><a href="<?php $_SERVER['DOCUMENT_ROOT']; ?>/admin/index.php">Admin</a></li>
+                        <li><a href="<?php $_SERVER['DOCUMENT_ROOT']; ?>/admin/authors/index.html.php">Admin</a></li>
                         <li><a href=""></a></li>
                     </ul>
                 </nav>
