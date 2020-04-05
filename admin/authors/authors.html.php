@@ -18,7 +18,7 @@
                 <h1>Управления Автрами</h1>
 
                 <p><a href="?add">Добавить нового пользователя</a></p>
-
+                <?php echo $name_id;?>
                 <ul>
                     <?php foreach($authors as $author): ?>
                         <li>
@@ -26,6 +26,7 @@
                                 <div>
                                     <?php htmlout($author['name']); ?>
 
+                                    <input type="hidden" name="name" value="<?php htmlout($author['name']); ?>">
                                     <input type="hidden" name="id" value="<?php  echo $author['id'];?>">
 
                                     <input type="submit" name="action" value="Редактировать">

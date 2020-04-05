@@ -9,20 +9,22 @@
 //================( Блок удаления авторов и связанных с ними ссылок в разных таблицах БД )=====================
 
 if(isset($_POST['action']) and $_POST['action'] == 'Удалить'){
+    $authName = $_POST['name'];
+    $authID = $_POST['id'];
     include $_SERVER['DOCUMENT_ROOT'] . '/admin/confirmation.html.php';
 
-    if(isset($_POST['confermation']) and $_POST['confermation'] = 'Удалить'){
+    if(isset($_GET['confermation']) and $_GET['confermation'] = 'Удалить'){
         include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
         // Извлекаем id шуток выбранного автора
         try{
             $sql = 'SELECT id FROM jokes WHERE author_id = :id';
             $s = $pdo->prepare($sql);
-            $s->bindValue(':b', $_POST['id']);
+            $s->bindValue(':id', $_POST['id']);
             $s->execute();
         }catch(PDOException $e){
             $error = "Ошибка соединения с БД. Извлечение id авторов." . $e->getMessage();
-            include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
             exit();
         }
         $result = $s->fetchAll();
@@ -38,7 +40,7 @@ if(isset($_POST['action']) and $_POST['action'] == 'Удалить'){
             }
         }catch(PDOException $e){
             $error = "Ошибка соединения с БД. Удаление id авторов из joke_category." . $e->getMessage();
-            include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
             exit();
         }
 
@@ -50,7 +52,7 @@ if(isset($_POST['action']) and $_POST['action'] == 'Удалить'){
             $s ->execute();
         }catch (PDOException $e){
             $error = "Ошибка соединения с БД. Удаление шуток авторов из jokes." . $e->getMessage();
-            include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
             exit();
         }
 
@@ -62,7 +64,7 @@ if(isset($_POST['action']) and $_POST['action'] == 'Удалить'){
             $s->execute();
         }catch(PDOException $e){
             $error = "Ошибка соединения с БД. Удаление выбранных авторов." . $e->getMessage();
-            include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
             exit();
         }
 

@@ -7,8 +7,10 @@
 </style>
 <div class="pop-up">
     <div class="inner">
-        <form action="" method="post">
-            <p>Вы подтверждаете удаление автора шутки <?php echo $authors['id'] ?></p>
+        <form action="" method="get">
+            <p>Вы подтверждаете удаление автора шутки <?php echo $authName; ?>?</p>
+            <input type="hidden" name="id2" value="<?php  echo $authID;?>">
+
             <input type="submit" name="confermation" value="Отменить">
             <input type="submit" name="confermation" value="Удалить">
         </form>
