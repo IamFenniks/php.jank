@@ -6,24 +6,6 @@
  * Time: 23:52
  */
 
-// =====================( Блок вывода авторов )===========================
-
-include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
-
-try{
-    $result = $pdo->query('SELECT author_id, author_name FROM author');
-}catch(PDOException $e){
-    $error = "Ошибка соединеня с БД. Извлечение списка авторов шуток. (" . $e->getMessage() . ").";
-    include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
-    exit();
-}
-
-foreach($result as $row){
-    $authors[] = array('id' => $row['author_id'], 'name' => $row['author_name']);
-}
-
-
-
 //================( Блок удаления авторов и связанных с ними ссылок в разных таблицах БД )=====================
 
 if(isset($_POST['action']) and $_POST['action'] == 'Удалить'){
@@ -84,12 +66,29 @@ if(isset($_POST['action']) and $_POST['action'] == 'Удалить'){
             exit();
         }
 
-        header('Locatin: .');
+        header('Location: .');
         exit();
     }
     elseif(isset($_POST['confermation']) and $_POST['confermation'] = 'Отменить'){
+        header('Location: .');
         exit();
     }
+}
+
+// =====================( Блок вывода авторов )===========================
+
+include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+
+try{
+    $result = $pdo->query('SELECT author_id, author_name FROM author');
+}catch(PDOException $e){
+    $error = "Ошибка соединеня с БД. Извлечение списка авторов шуток. (" . $e->getMessage() . ").";
+    include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+    exit();
+}
+
+foreach($result as $row){
+    $authors[] = array('id' => $row['author_id'], 'name' => $row['author_name']);
 }
 
 include 'authors.html.php';
