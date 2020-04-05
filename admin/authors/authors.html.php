@@ -17,7 +17,7 @@
                 <?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/nav.html.php';?>
                 <h1>Управления Автрами</h1>
 
-                <p><a href="?add">Добавить нового пользователя</a></p>
+                <p><a href="?add">Добавить нового автора</a></p>
                 <?php echo $name_id;?>
                 <ul>
                     <?php foreach($authors as $author): ?>
