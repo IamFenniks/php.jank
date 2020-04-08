@@ -18,7 +18,7 @@
                         <p><a href="?addjoke">Добавьте собственную шутку</a></p>
                         <p>Вот все шутки, которые есть в Базе Данных:</p>
 
-                        <?php foreach ($jokes as $i => $joke): ?>
+                        <?php foreach($jokes as $i => $joke): ?>
                             <form action="?delete_joke" method="post">
                                 <blockquote>
                                     <p>

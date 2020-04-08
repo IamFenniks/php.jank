@@ -29,7 +29,7 @@
                                 </label>
                             </div>
                             <div>
-                                <input type="hidden" value="<?php htmlout($id); ?>">
+                                <input type="hidden" name="id" value="<?php htmlout($id); ?>">
 
                                 <input class="btn btn-info" type="submit" value="<?php htmlout($button); ?>">
                             </div>
