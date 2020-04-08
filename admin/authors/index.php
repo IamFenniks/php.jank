@@ -99,7 +99,7 @@ if(isset($_POST['action']) and $_POST['action'] == 'Удалить'){
     $authID = $_POST['id'];
     include $_SERVER['DOCUMENT_ROOT'] . '/admin/confirmation.html.php';
 
-    if(isset($_GET['confermation']) and $_GET['confermation'] = 'Удалить'){
+    if($_POST['confermation'] = 'Удалить'){
         include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
         // Извлекаем id шуток выбранного автора
@@ -154,11 +154,11 @@ if(isset($_POST['action']) and $_POST['action'] == 'Удалить'){
             exit();
         }
 
-        header('Location: ' . $_SERVER['DOCUMENT_ROOT'] . '/admin/authors/authors.html.php');
+        header('Location: .');
         exit();
     }
-    elseif(isset($_POST['confermation']) and $_POST['confermation'] = 'Отменить'){
-        header('Location: ' . $_SERVER['DOCUMENT_ROOT'] . '/admin/authors/authors.html.php');
+    elseif($_POST['confermation'] = 'Отменить'){
+        header('Location: .');
         exit();
     }
 }
