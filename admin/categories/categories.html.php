@@ -18,24 +18,23 @@
                 <h1>Управления Категориями</h1>
 
                 <p><a href="?add">Добавить новую категорию</a></p>
-                <?php echo $category_id;?>
-                <ul>
-                    <?php foreach($categorise as $category): ?>
-                        <li>
+                <table>
+                    <?php foreach($categories as $category): ?>
+                        <tr>
                             <form action="" method="post">
                                 <div>
-                                    <?php htmlout($category['name']); ?>
+                                    <td><?php htmlout($category['name']); ?></td>
 
                                     <input type="hidden" name="name" value="<?php htmlout($category['name']); ?>">
-                                    <input type="hidden" name="id" value="<?php  echo $category['id'];?>">
+                                    <input type="hidden" name="id"   value="<?php  echo $category['id'];?>">
 
-                                    <input type="submit" name="action" value="Редактировать">
-                                    <input type="submit" name="action" value="Удалить">
+                                    <td><input type="submit" name="action" value="Редактировать"></td>
+                                    <td><input type="submit" name="action" value="Удалить"></td>
                                 </div>
                             </form>
-                        </li>
+                        </tr>
                     <?php endforeach; ?>
-                </ul>
+                </table>
                 <p><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/addjoke/index.php">Вернуться на Главную страницу</a></p>
             </div>
         </div>
