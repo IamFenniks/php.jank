@@ -119,7 +119,7 @@ if(isset($_POST['action']) && $_POST['action'] == 'Удалить'){
         include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
         exit();
     }
-    
+
     header('Location: .');
     exit();
 }
