@@ -41,8 +41,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                                     <?php endforeach; ?>
                                 </select>&nbsp;&nbsp;&nbsp;&nbsp;
 
-                                <label for="author">По категории:</label>
-                                <select name="author" id="author">
+                                <label for="category">По категории:</label>
+                                <select name="category" id="category">
                                     <option value="">Любая категория</option>
                                     <?php foreach($categories as $category): ?>
                                         <option value="<?php htmlout($category['id']); ?>">
@@ -54,7 +54,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                                 <label for="text">Содержит текст:</label>
                                 <input type="text" id="text" name="text">
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="hidden" name="action" value="search">
+                                <input type="hidden" name="action"  value="search">
                                 <input type="submit" value="Искать" class="btn btn-warning">
                             </div>
                         </form>

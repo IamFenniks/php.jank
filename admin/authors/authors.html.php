@@ -14,7 +14,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="main">
-                <?php include '../../assets/nav.html.php';?>
+                <?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/nav.html.php';?>
                 <h1>Управления Автрами</h1>
 
                 <p><a href="?add">Добавить нового автора</a></p>

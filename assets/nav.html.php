@@ -8,11 +8,10 @@
             <div class="header">
                 <nav class="navbar">
                     <ul>
-                        <li><a href="../addjoke/index.php">AddJoke</a></li>
-                        <li><a href="../date/today.php">Date</a></li>
-                        <li><a href="../wellcome/index.php">Wellcome</a></li>
-                        <li><a href="../admin/index.php">Admin</a></li>
-                        <li><a href=""></a></li>
+                        <li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/addjoke/index.php">AddJoke</a></li>
+                        <li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/date/today.php">Date</a></li>
+                        <li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/wellcome/index.php">Wellcome</a></li>
+                        <li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/admin/index.php">Admin</a></li>
                     </ul>
                 </nav>
             </div>
