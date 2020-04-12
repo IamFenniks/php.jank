@@ -49,6 +49,11 @@
                                 <?php endforeach; ?>
                             </table>
                         <?php endif; ?>
+
+                        <hr>
+
+                        <p><a href="?">Искать заново</a></p>
+                        <p><a href="../index.php">Вернуться на Главную</a></p>
                     </div>
                 </div>
             </div>
