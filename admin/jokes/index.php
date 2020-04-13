@@ -6,6 +6,118 @@
  * Time: 14:37
  */
 
+    // Блок добавления шуток
+    if(isset($_GET['add'])){
+        $pageTitle = 'Новая шутка';
+        $action = 'addform';
+        $text = '';
+        $author_id = '';
+        $id = '';
+        $button = 'Добавить шутку';
+
+        include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+
+        try{
+            $result = $pdo->query('SELECT author_id, author_name FROM author');
+        }catch (PDOException $e){
+            $error = 'Ошибка извлечения имени автора' . $e->getMessage();
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
+
+        foreach ($result as $row){
+            $authors[] = array('id' => $row['author_id'], 'name' => $row['author_name']);
+        }
+
+        //Получаем категории
+        try{
+            $result = $pdo->query('SELECT id, category_name FROM category');
+        }catch (PDOException $e){
+            $error = 'Ошибка извлечения имени автора' . $e->getMessage();
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
+
+        foreach ($result as $row){
+            $categories[] = array('id' => $row['id'], 'name' => $row['category_name'], 'selected' => false);
+        }
+
+        include 'form.html.php';
+        exit();
+    }
+    // ============================ Блок редактирования шуток =================
+    if(isset($_POST['action']) and $_POST['action'] == 'Редактировать'){
+        include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+
+        try{
+            $sql = 'SELECT id, joketext, author_id FROM jokes WHERE id = :id';
+            $s = $pdo->prepare($sql);
+            $s->bindValue(':id', $_POST['id']);
+            $s->execute();
+        }catch (PDOException $e) {
+            $error = 'Ошибка извлечения имени шуток автора' . $e->getMessage();
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
+
+        $row = $s->fetch();
+        $pageTitle = 'Редактировать шутку';
+        $action = 'editform';
+        $text = $row['joketext'];
+        $puthorid = $row['author_id'];
+        $id = $row['id'];
+        $button = 'Обновить шутку';
+
+        //Формируем список всех авторов
+        try{
+            $result = $pdo->query('SELECT author_id, author_name FROM author');
+        }catch (PDOException $e){
+            $error = 'Ошибка извлечения имени автора' . $e->getMessage();
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
+
+        foreach ($result as $row){
+            $authors[] = array('id' => $row['author_id'], 'name' => $row['author_name']);
+        }
+
+        // Формируем список категорий выбранной шутки
+        try{
+            $sql = 'SELECT category_id FROM joke_category WHERE joke_id = :id';
+            $s = $pdo->prepare($sql);
+            $s->bindValue(':id', $_POST['id']);
+            $s->execute();
+        }catch (PDOException $e){
+            $error = 'Ошибка извлечения категорий выбранной шутки' . $e->getMessage();
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
+
+        foreach ($s as $row){
+            $selectedCategories[] = $row['category_id'];
+        }
+echo $selectedCategories;
+        // Формируем список всех категорий
+        try{
+            $result = $pdo->query('SELECT id, category_name FROM category');
+        }catch (PDOException $e){
+            $error = 'Ошибка извлечения категорий' . $e->getMessage();
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
+
+        foreach ($result as $row){
+            $categories[] = array(
+                'id' => $row['id'],
+                'name' => $row['category_name'],
+                'selcted' => in_array($row['id'], $selectedCategories));
+        }
+
+        include 'form.html.php';
+        exit();
+    }
+
+    // ============================ Блок интеграции ===========================
     if(isset($_GET['action']) && $_GET['action'] == 'search'){
         include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
@@ -68,7 +180,7 @@
     try{
         $result = $pdo->query('SELECT author_id, author_name FROM author');
     }catch (PDOException $e){
-        $error = 'Ошибка извлечения имени автора';
+        $error = 'Ошибка извлечения имени автора' . $e->getMessage();
         include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
         exit();
     }
@@ -81,7 +193,7 @@
     try{
         $result = $pdo->query('SELECT id, category_name FROM category');
     }catch (PDOException $e){
-        $error = 'Ошибка извлечения имени автора';
+        $error = 'Ошибка извлечения категорий' . $e->getMessage();
         include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
         exit();
     }

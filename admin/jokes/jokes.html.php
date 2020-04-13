@@ -25,7 +25,9 @@
                     <div class="main">
                         <?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/nav.html.php';?>
                         <h1>Управление шутками: результаты поиска.</h1>
-
+                        <hr>
+                        <div><a href="?add">Добавить новую шутку</a></div>
+                        <hr>
                         <?php if(isset($jokes)): ?>
                             <table>
                                 <tr>

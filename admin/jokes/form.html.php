@@ -2,66 +2,75 @@
 
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <?php
-    $title = $_SERVER['DOCUMENT_ROOT'] . '/' . $pageTitle;
-    include $_SERVER['DOCUMENT_ROOT'] . '/assets/head.html.php';
-    ?>
-</head>
+    <head>
+        <?php
+        $title = $_SERVER['DOCUMENT_ROOT'] . '/' . $pageTitle;
+        include $_SERVER['DOCUMENT_ROOT'] . '/assets/head.html.php';
+        ?>
+        <style type="text/css">textarea{display: block; width: 100%;}</style>
+    </head>
 
-<body>
-<main class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="main">
-                <?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/nav.html.php';?>
-                <h1><?php htmlout($pageTitle); ?></h1>
+    <body>
+        <main class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main">
+                        <?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/nav.html.php';?>
+                        <h1><?php htmlout($pageTitle); ?></h1>
 
-                <form action="?<?php htmlout($action); ?>" method="post">
-                    <div>
-                        <textarea name="text" id="text" cols="40" rows="3"><?php htmlout($text); ?></textarea>
-                    </div>
-                    <div>
-                        <label for="name">Автор:</label>
-                        <select name="author" id="author">
-                            <option value="">Выбрать</option>
-                            <?php foreach($authors as $author): ?>
-                                <option value="<?php $author['id'] ?>" <?php
-                                    if($author['id'] == $authorID){ // from jokes
-                                        echo 'selected';
-                                    }
-                                ?>></option>
-                            <?php endforeach; ?>
-                        </select>
-                    </div>
-                    <div>
-                        label for="name">Автор:</label>
-                        <select name="author" id="author">
-                            <option value="">Выбрать</option>
-                            <?php foreach($authors as $author): ?>
-                                <option value="<?php $author['id'] ?>" <?php
-                                if($author['id'] == $authorID){ // from jokes
-                                    echo 'selected';
-                                }
-                                ?>></option>
-                            <?php endforeach; ?>
-                        </select>
-                    </div>
-                    <div>
-                        <input type="hidden" name="id" value="<?php htmlout($id); ?>">
+                        <form action="?<?php htmlout($action); ?>" method="post">
+                            <div>
+                                <label for="text">Введите сюда свою шутку:</label>
+                                <textarea name="text" id="text" cols="40" rows="3"><?php htmlout($text); ?></textarea>
+                            </div>
 
-                        <input class="btn btn-info" type="submit" value="<?php htmlout($button); ?>">
+                            <br>
+
+                            <div>
+                                <label for="name">Автор:</label>
+                                <select name="author" id="author">
+                                    <option value="">Выбрать</option>
+                                    <?php foreach($authors as $author): ?>
+                                        <option value="<?php $author['id'] ?>" <?php
+                                            if($author['id'] == $author_id){ // from jokes
+                                                echo ' selected';
+                                            }?>>
+                                            <?php htmlout($author['name']); ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+
+                            <fieldset>
+                                <legend>Категории:</legend>
+                                <?php foreach ($categories as $category): ?>
+                                    <div><label for="category<?php htmlout($category['id']); ?>">
+                                            <input type="checkbox"
+                                                   name="category[]"
+                                                   id="category<?php htmlout($category['id']); ?>"
+                                                   value="<?php htmlout($category['id']); ?>"
+                                                <?php if($category['selected']) echo ' checked'; ?>>
+                                            <?php htmlout($category['name']); ?>
+                                        </label>
+                                    </div>
+                                <?php endforeach; ?>
+                            </fieldset>
+
+                            <div>
+                                <input type="hidden" name="id" value="<?php htmlout($id); ?>">
+
+                                <input class="btn btn-info" type="submit" value="<?php htmlout($button); ?>">
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
-    </div>
-</main>
-<br><hr>
+        </main>
+        <br><hr>
 
-<footer>
-    <?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/footer.html.php'; ?>
-</footer>
-</body>
+        <footer>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/footer.html.php'; ?>
+        </footer>
+    </body>
 </html>
 
