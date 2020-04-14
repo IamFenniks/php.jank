@@ -6,7 +6,8 @@
  * Time: 14:37
  */
 
-    // Блок добавления шуток
+    // ========================== Блок добавления шуток ============================= //
+
     if(isset($_GET['add'])){
         $pageTitle = 'Новая шутка';
         $action = 'addform';
@@ -45,7 +46,63 @@
         include 'form.html.php';
         exit();
     }
-    // ============================ Блок редактирования шуток =================
+
+    // Добавляем в таблицу с шутками новую щутку, указав автора
+    if(isset($_POST['addform'])){
+        include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+
+        if($_POST['author'] == ''){
+            $error = 'Вы не указали автора шутки. Вернитесь назад.';
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
+
+        try{
+            $sql = 'INSERT INTO jokes SET 
+                    joketext = :joketext, 
+                    jokedate = CURDATE(), 
+                    author_id = :author_id';
+            $s = $pdo->prepare($sql);
+            $s->bindValue(':joketext', $_POST['text']);
+            $s->bindValue(':author_id', $_POST['author']);
+            $s->execute();
+        }catch (PDOException $e){
+            $error = 'Ошибка добавления шутки' . $e->getMessage();
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
+
+        $joke_id = $pdo->lastInsertId();
+
+        // Добавляем в промежуточную таблицу id зачекиненых категорий
+        if(isset($_POST['category'])){
+            try{
+                $sql = 'INSERT INTO joke_category SET 
+                        joke_id = :joke_id, 
+                        category_id = :category_id';
+                $s = $pdo->prepare($sql);
+
+                foreach ($_POST['category'] as $category_id){
+                    $s->bindValue(':joke_id', $joke_id);
+                    $s->bindValue(':category_id', $category_id);
+                    $s->execute();
+                }
+            }catch (PDOException $e){
+                $error = 'Ошибка добавления id шутки в промежуточную таблицу' . $e->getMessage();
+                include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+                exit();
+            }
+        }
+
+        header('Location: .');
+        exit();
+    }
+
+
+
+    // ============================ Блок редактирования шуток ====================== //
+
+    // Отправка данных в форму для редактирования
     if(isset($_POST['action']) and $_POST['action'] == 'Редактировать'){
         include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
@@ -64,7 +121,7 @@
         $pageTitle = 'Редактировать шутку';
         $action = 'editform';
         $text = $row['joketext'];
-        $puthorid = $row['author_id'];
+        $author_id = $row['author_id'];
         $id = $row['id'];
         $button = 'Обновить шутку';
 
@@ -96,7 +153,7 @@
         foreach ($s as $row){
             $selectedCategories[] = $row['category_id'];
         }
-echo $selectedCategories;
+
         // Формируем список всех категорий
         try{
             $result = $pdo->query('SELECT id, category_name FROM category');
@@ -110,11 +167,74 @@ echo $selectedCategories;
             $categories[] = array(
                 'id' => $row['id'],
                 'name' => $row['category_name'],
-                'selcted' => in_array($row['id'], $selectedCategories));
+                'selected' => in_array($row['id'], $selectedCategories));
         }
 
         include 'form.html.php';
         exit();
+    }
+
+    // Получение данных из формы для обработки
+    if(isset($_POST['editform'])){
+        include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+
+        if($_POST['author'] == ''){
+            $error = 'Вы не указали автора шутки. Вернитесь назад.';
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
+
+        // Обновляем данные в таблице с шутками
+        try{
+            $sql = 'UPDATE jokes SET 
+                    joketext = :joke_text 
+                    author_id = :author_id 
+                    WHERE id = :id';
+            $s = $pdo->prepare($sql);
+            $s->bindValue(':id', $_POST['id'];
+            $s->bindValue(':joke_text', $_POST['text']);
+            $s->bindValue(':author_id', $_POST['author']);
+            $s->execute();
+        }catch (PDOException $e){
+            $error = 'Ошибка добавления измененых шуток' . $e->getMessage();
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
+
+        // Удаляем из промежуточной таблицы все записи перед обновлением по-редактируемой шутке
+        try{
+            $sql = 'DELETE FROM joke_category WHERE joke_id = :joke_id';
+            $s = $pdo->prepare(':joke_id', $_POST['id']);
+            $s->execute();
+        }catch (PDOException $e){
+            $error = 'Ошибка удаления записей из промежуточной таблицы по-выбранной шутки' . $e->getMessage();
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
+
+        // Обновление промежуточной таблицы
+        if(isset($_POST['category'])){
+            try{
+                $sql = 'INSERT INTO joke_category SET 
+                        joke_id = :joke_id, 
+                        category_id = :category_id';
+                $s = $pdo->prepare($sql);
+
+                foreach($_POST['category'] as $category_id){
+                    $s->bindValue(':joke_id', $_POST['id']);
+                    $s->bindValue(':category_id', $category_id);
+                    $s->execute();
+                }
+            }catch (PDOException $e){
+                $error = 'Ошибка добавления в промежуточную таблицу для выбранной шутки' . $e->getMessage();
+                include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+                exit();
+            }
+        }
+
+        header('Location: .');
+        exit();
+
     }
 
     // ============================ Блок интеграции ===========================

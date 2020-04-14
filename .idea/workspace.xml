@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18166a93-0daa-42d6-8312-664540bdb2d7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/jokes/form.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/jokes/form.html.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/jokes/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/jokes/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/jokes/jokes.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/jokes/jokes.html.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,8 +16,16 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/jokes/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="98" column="25" selection-start-line="98" selection-start-column="25" selection-end-line="98" selection-end-column="25" />
+            <state relative-caret-position="421">
+              <caret line="235" column="15" selection-start-line="235" selection-start-column="15" selection-end-line="235" selection-end-column="15" />
+              <folding>
+                <element signature="e#2306#2603#0#PHP" />
+                <element signature="e#2613#2739#0#PHP" />
+                <element signature="e#2803#3226#0#PHP" />
+                <element signature="e#3236#3324#0#PHP" />
+                <element signature="e#3402#3693#0#PHP" />
+                <element signature="e#3703#3932#0#PHP" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -28,8 +33,8 @@
       <file leaf-file-name="form.html.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/jokes/form.html.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+            <state relative-caret-position="221">
+              <caret line="48" column="65" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -37,8 +42,8 @@
       <file leaf-file-name="jokes.html.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/jokes/jokes.html.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="44" column="107" selection-start-line="44" selection-start-column="94" selection-end-line="44" selection-end-column="107" />
+            <state relative-caret-position="663">
+              <caret line="46" column="54" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
               <folding>
                 <element signature="e#6#92#0#PHP" expanded="true" />
               </folding>
@@ -49,8 +54,8 @@
       <file leaf-file-name="searchform.html.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/jokes/searchform.html.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="27" selection-end-column="74" />
+            <state relative-caret-position="357">
+              <caret line="26" selection-start-line="26" selection-end-line="27" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -249,14 +254,15 @@
       <workItem from="1586413978472" duration="18544000" />
       <workItem from="1586620854026" duration="14528000" />
       <workItem from="1586766619907" duration="13565000" />
+      <workItem from="1586893240153" duration="6130000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141989000" />
+    <option name="totallyTimeSpent" value="148119000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1376" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.1420205" />
@@ -282,20 +288,20 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1420205" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -548,15 +554,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/jokes/searchform.html.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="27" selection-end-column="74" />
+        <state relative-caret-position="357">
+          <caret line="26" selection-start-line="26" selection-end-line="27" selection-end-column="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/jokes/jokes.html.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="44" column="107" selection-start-line="44" selection-start-column="94" selection-end-line="44" selection-end-column="107" />
+        <state relative-caret-position="663">
+          <caret line="46" column="54" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
           <folding>
             <element signature="e#6#92#0#PHP" expanded="true" />
           </folding>
@@ -565,15 +571,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/jokes/form.html.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        <state relative-caret-position="221">
+          <caret line="48" column="65" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/jokes/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="98" column="25" selection-start-line="98" selection-start-column="25" selection-end-line="98" selection-end-column="25" />
+        <state relative-caret-position="421">
+          <caret line="235" column="15" selection-start-line="235" selection-start-column="15" selection-end-line="235" selection-end-column="15" />
+          <folding>
+            <element signature="e#2306#2603#0#PHP" />
+            <element signature="e#2613#2739#0#PHP" />
+            <element signature="e#2803#3226#0#PHP" />
+            <element signature="e#3236#3324#0#PHP" />
+            <element signature="e#3402#3693#0#PHP" />
+            <element signature="e#3703#3932#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>
