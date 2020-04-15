@@ -11,6 +11,7 @@
     if(isset($_GET['add'])){
         $pageTitle = 'Новая шутка';
         $action = 'addform';
+        $label = 'Введите сюда свою шутку:';
         $text = '';
         $author_id = '';
         $id = '';
@@ -120,6 +121,7 @@
         $row = $s->fetch();
         $pageTitle = 'Редактировать шутку';
         $action = 'editform';
+        $label = 'Редактируйте здесь свою шутку:';
         $text = $row['joketext'];
         $author_id = $row['author_id'];
         $id = $row['id'];
@@ -175,7 +177,7 @@
     }
 
     // Получение данных из формы для обработки
-    if(isset($_POST['editform'])){
+    if(isset($_GET['editform'])){
         include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
         if($_POST['author'] == ''){
@@ -187,11 +189,11 @@
         // Обновляем данные в таблице с шутками
         try{
             $sql = 'UPDATE jokes SET 
-                    joketext = :joke_text 
+                    joketext = :joke_text, 
                     author_id = :author_id 
                     WHERE id = :id';
             $s = $pdo->prepare($sql);
-            $s->bindValue(':id', $_POST['id'];
+            $s->bindValue(':id', $_POST['id']);
             $s->bindValue(':joke_text', $_POST['text']);
             $s->bindValue(':author_id', $_POST['author']);
             $s->execute();
@@ -204,7 +206,8 @@
         // Удаляем из промежуточной таблицы все записи перед обновлением по-редактируемой шутке
         try{
             $sql = 'DELETE FROM joke_category WHERE joke_id = :joke_id';
-            $s = $pdo->prepare(':joke_id', $_POST['id']);
+            $s = $pdo->prepare($sql);
+            $s->bindValue(':joke_id', $_POST['id']);
             $s->execute();
         }catch (PDOException $e){
             $error = 'Ошибка удаления записей из промежуточной таблицы по-выбранной шутки' . $e->getMessage();
@@ -234,7 +237,6 @@
 
         header('Location: .');
         exit();
-
     }
 
     // ============================ Блок интеграции ===========================

@@ -20,7 +20,7 @@
 
                         <form action="?<?php htmlout($action); ?>" method="post">
                             <div>
-                                <label for="text">Введите сюда свою шутку:</label>
+                                <label for="text"><?php echo $label; ?></label>
                                 <textarea name="text" id="text" cols="40" rows="3"><?php htmlout($text); ?></textarea>
                             </div>
 
@@ -30,8 +30,9 @@
                                 <label for="name">Автор:</label>
                                 <select name="author" id="author">
                                     <option value="">Выбрать</option>
+
                                     <?php foreach($authors as $author): ?>
-                                        <option value="<?php $author['id'] ?>" <?php
+                                        <option value="<?php htmlout($author['id']); ?>" <?php
                                             if($author['id'] == $author_id){ // from jokes
                                                 echo ' selected';
                                             }?>>
