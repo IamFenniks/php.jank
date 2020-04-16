@@ -49,7 +49,7 @@
     }
 
     // Добавляем в таблицу с шутками новую щутку, указав автора
-    if(isset($_POST['addform'])){
+    if(isset($_GET['addform'])){
         include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
         if($_POST['author'] == ''){
@@ -239,7 +239,37 @@
         exit();
     }
 
+    // ============================ Блок удаления шуток =======================
+
+    if(isset($_POST['action']) and $_POST['action'] == 'Удалить'){
+        include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+
+        try{
+            $sql = 'DELETE FROM jokes WHERE id = :id';
+            $s = $pdo->prepare($sql);
+            $s->bindValue(':id', $_POST['id']);
+            $s->execute();
+        }catch (PDOException $e){
+            $error = 'Ошибка удаления выбранной шутки' . $e->getMessage();
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
+
+        try{
+            $sql = 'DELETE FROM joke_category WHERE  joke_id = :id';
+            $s = $pdo->prepare($sql);
+            $s->bindValue(':id', $_POST['id']);
+            $s->execute();
+        }catch (PDOException $e){
+            $error = 'Ошибка удаления из промежуточной таблицы для выбранной шутки' . $e->getMessage();
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
+    }
+
+
     // ============================ Блок интеграции ===========================
+
     if(isset($_GET['action']) && $_GET['action'] == 'search'){
         include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
