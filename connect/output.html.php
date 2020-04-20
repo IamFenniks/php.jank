@@ -8,6 +8,11 @@
     <title>Вывод скрипта</title>
 </head>
 <body>
-   <?php echo $output; ?>
+    <?php
+        foreach ($output as $id => $item){
+            echo $id . '). ' . $item . '<br>';
+        }
+
+    ?>
 </body>
 </html>

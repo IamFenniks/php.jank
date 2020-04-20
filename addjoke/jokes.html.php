@@ -24,7 +24,7 @@
                                     <p>
                                         <?php
                                             echo ++$i . '. ';
-                                            htmlout($joke['text']);
+                                            markdownout($joke['text']);
                                         ?>
                                         <br>
                                         (автор: <a href="mailto:<?php htmlout($joke['auth_email'])?>">

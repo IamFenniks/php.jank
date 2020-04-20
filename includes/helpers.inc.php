@@ -13,3 +13,75 @@ function html($text){
 function htmlout($text){
     echo html($text);
 }
+
+function markdown2html($text){
+    $text = htmlout($text);
+
+    // Полужирное начертание
+    $text = preg_replace('/__(.+?)__/s', '<em>$1</em>', $text);
+    $text = preg_replace('/\*\*(.+?)\*\*/s', '<em>$1</em>', $text);
+
+    // Курсивное начертание
+    $text = preg_replace('/_(.+?)_/s', '<em>$1</em>', $text);
+    $text = preg_replace('/\*(.+?)\*/s', '<em>$1</em>', $text);
+
+
+    // Преобразуем стиль Windows в Unix
+    $text = preg_replace('/\n\r/', "\n", $text);
+
+    // Преобразуем стиль Macintosh в Unix
+    $text = preg_replace('/n\r/', "\n", $text);
+
+    // Абзацы
+    $text = '<p>' . preg_replace('/\n\n/', '<p></p>', $text) . '</p>';
+
+    // Разрывы строки
+    $text = preg_replace('/\n/', '<br>', $text);
+
+
+    // ????????????????   - ИЛИ - ???????????????????? //
+    /* Преобразуем стиль Windows в Unix
+        *$text = str_replace("\n\r", "\n", $text);
+
+        *Преобразуем стиль Macintosh в Unix
+        *$text = str_replace("n\r", "\n", $text);
+
+        *Абзацы
+        *$text = '<p>' . str_replace("\n\n", '<p></p>', $text) . '</p>';
+
+        *Разрывы строки
+        $text = str_replace("\n", '<br>', $text);
+    */
+
+    // [Текст ссылки] (Адрес URL)
+    $text = preg_replace('/\[([^\]]+)]\(([-a-z0-9._~:\/?#@!$&`()*+,;=%]+)\)/i',
+            '<a href="$2">$1</a>', $text);
+
+    return $text;
+}
+
+function markdownout($text){
+    echo markdown2html($text);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

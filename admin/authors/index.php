@@ -99,7 +99,7 @@ if(isset($_POST['action']) and $_POST['action'] == 'Удалить'){
     $authID = $_POST['id'];
     include $_SERVER['DOCUMENT_ROOT'] . '/admin/confirmation.html.php';
 
-    if($_POST['confermation'] = 'Удалить'){
+    if($_GET['confermation'] == 'Удалить'){
         include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
         // Извлекаем id шуток выбранного автора
@@ -154,10 +154,6 @@ if(isset($_POST['action']) and $_POST['action'] == 'Удалить'){
             exit();
         }
 
-        header('Location: .');
-        exit();
-    }
-    elseif($_POST['confermation'] = 'Отменить'){
         header('Location: .');
         exit();
     }

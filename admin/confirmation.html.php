@@ -17,7 +17,7 @@
 <body>
 <div class="pop-up">
     <div class="inner">
-        <form action="?" method="post">
+        <form action="." method="get">
             <p>Вы подтверждаете удаление автора шутки <?php echo $authName; ?>?</p>
             <input type="hidden" name="id2" value="<?php  echo $authID;?>">
 
