@@ -37,24 +37,32 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                             <tr>
                                 <th>Описание товара:</th>
                                 <th>Цена:</th>
+                                <td></td>
                             </tr>
                             </thead>
-
-                            <tfoot>
-                            <tr>
-                                <td>Итого:</td>
-                                <td><?php echo number_format($total, 2); ?></td>
-                            </tr>
-                            </tfoot>
 
                             <tbody>
                                 <?php foreach ($cart as $item): ?>
                                     <tr>
                                         <td><?php htmlout($item['desc']); ?></td>
                                         <td>$<?php echo number_format($item['price'], 2); ?></td>
+                                        <td>
+                                            <form action="?" method="post">
+                                                <input type="hidden" name="id" value="<?php echo $id ?>">
+                                                <input type="submit" name="action" value="Отменить">
+                                            </form>
+                                        </td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td>Итого:</td>
+                                    <td>$<?php echo number_format($total, 2); ?></td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
                         </table>
 
                         <form action="?" method="post">

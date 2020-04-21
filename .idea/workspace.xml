@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="18166a93-0daa-42d6-8312-664540bdb2d7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/jokes/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/jokes/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/jokes/jokes.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/jokes/jokes.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopcart/cart.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopcart/cart.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopcart/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopcart/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,37 +16,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/jokes/index.php">
+        <entry file="file://$PROJECT_DIR$/shopcart/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="314" column="81" selection-start-line="314" selection-start-column="81" selection-end-line="314" selection-end-column="81" />
-              <folding>
-                <element signature="e#188#1477#0#PHP" />
-                <element signature="e#1547#3347#0#PHP" />
-                <element signature="e#3494#6054#0#PHP" />
-                <element signature="e#6107#8501#0#PHP" />
-              </folding>
+            <state relative-caret-position="442">
+              <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jokes.html.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/jokes/jokes.html.php">
+      <file leaf-file-name="cart.html.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shopcart/cart.html.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="54" column="49" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
-              <folding>
-                <element signature="e#6#92#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="407">
+              <caret line="61" column="41" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchform.html.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/jokes/searchform.html.php">
+      <file leaf-file-name="catalog.html.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shopcart/catalog.html.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+            <state relative-caret-position="306">
+              <caret line="56" column="52" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="122" />
             </state>
           </provider>
         </entry>
@@ -111,12 +102,12 @@
         <option value="$PROJECT_DIR$/cookiecounter/welcom.html.php" />
         <option value="$PROJECT_DIR$/cookiecounter/index.php" />
         <option value="$PROJECT_DIR$/assets/nav.html.php" />
-        <option value="$PROJECT_DIR$/shopcart/catalog.html.php" />
-        <option value="$PROJECT_DIR$/shopcart/index.php" />
-        <option value="$PROJECT_DIR$/shopcart/cart.html.php" />
         <option value="$PROJECT_DIR$/admin/jokes/jokes.html.php" />
         <option value="$PROJECT_DIR$/admin/jokes/searchform.html.php" />
         <option value="$PROJECT_DIR$/admin/jokes/index.php" />
+        <option value="$PROJECT_DIR$/shopcart/catalog.html.php" />
+        <option value="$PROJECT_DIR$/shopcart/cart.html.php" />
+        <option value="$PROJECT_DIR$/shopcart/index.php" />
       </list>
     </option>
   </component>
@@ -153,13 +144,7 @@
             <path>
               <item name="php.jank" type="b2602c69:ProjectViewProjectNode" />
               <item name="php.jank" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="php.jank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="php.jank" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="jokes" type="462c0819:PsiDirectoryNode" />
+              <item name="shopcart" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -233,12 +218,12 @@
       <workItem from="1587037170731" duration="6215000" />
       <workItem from="1587278172874" duration="8011000" />
       <workItem from="1587372295152" duration="12836000" />
-      <workItem from="1587450403415" duration="7892000" />
+      <workItem from="1587450403415" duration="17324000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190007000" />
+    <option name="totallyTimeSpent" value="199439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -502,9 +487,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cookiecounter/welcom.html.php" />
-    <entry file="file://$PROJECT_DIR$/shopcart/catalog.html.php" />
-    <entry file="file://$PROJECT_DIR$/shopcart/index.php" />
-    <entry file="file://$PROJECT_DIR$/shopcart/cart.html.php" />
+    <entry file="file://$PROJECT_DIR$/admin/jokes/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="314" column="81" selection-start-line="314" selection-start-column="81" selection-end-line="314" selection-end-column="81" />
+          <folding>
+            <element signature="e#188#1477#0#PHP" />
+            <element signature="e#1547#3347#0#PHP" />
+            <element signature="e#3494#6054#0#PHP" />
+            <element signature="e#6107#8501#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/jokes/jokes.html.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -522,16 +517,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/jokes/index.php">
+    <entry file="file://$PROJECT_DIR$/shopcart/catalog.html.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="314" column="81" selection-start-line="314" selection-start-column="81" selection-end-line="314" selection-end-column="81" />
-          <folding>
-            <element signature="e#188#1477#0#PHP" />
-            <element signature="e#1547#3347#0#PHP" />
-            <element signature="e#3494#6054#0#PHP" />
-            <element signature="e#6107#8501#0#PHP" />
-          </folding>
+        <state relative-caret-position="306">
+          <caret line="56" column="52" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopcart/cart.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="61" column="41" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shopcart/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
         </state>
       </provider>
     </entry>

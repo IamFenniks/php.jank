@@ -8,10 +8,10 @@
 
 // Массив с товарами
 $items = array(
-    array('id' => 1, 'desc' => 'Канадско-австралийский словарь', 'price' => 24.95),
-    array('id' => 2, 'desc' => 'Практическ нвый парашют (никогда не открывался)', 'price' => 1000),
-    array('id' => 3, 'desc' => 'Песни группы GoldFish (набор из 2-х CD)', 'price' => 19.99),
-    array('id' => 4, 'desc' => 'Просто JavaScipt (SitePoint)', 'price' => 39.95)
+    array('id' => '1', 'desc' => 'Канадско-австралийский словарь', 'price' => 24.95),
+    array('id' => '2', 'desc' => 'Практическ нвый парашют (никогда не открывался)', 'price' => 1000),
+    array('id' => '3', 'desc' => 'Песни группы GoldFish (набор из 2-х CD)', 'price' => 19.99),
+    array('id' => '4', 'desc' => 'Просто JavaScipt (SitePoint)', 'price' => 39.95)
 );
 
 // Старт новой сессии
@@ -28,6 +28,12 @@ if(isset($_POST['action']) and $_POST['action'] == "Купить"){
     exit();
 }
 
+if (isset($_POST['action']) and $_POST['action'] == 'Очистить корзину'){
+    // Опустошаем массив $_SESSION['cart']
+    unset($_SESSION['cart']);
+    header('Location: ?cart');
+    exit();
+}
 // Обработка команды "Посмотреть корзину"
 if (isset($_GET['cart'])){
     $cart = array();
@@ -48,12 +54,14 @@ if (isset($_GET['cart'])){
 }
 
 // Очистка корзины
-if (isset($_POST['action']) and $_POST['action'] == 'Очистить корзину'){
+if (isset($_POST['action']) and $_POST['action'] == 'Отменить'){
     // Опустошаем массив $_SESSION['cart']
-    unset($_SESSION['cart']);
+    unset($_SESSION['cart'][$_POST['id']-1]);
     header('Location: ?cart');
     exit();
 }
+
+
 
 // Подключение каталога товаров
 include 'catalog.html.php';
