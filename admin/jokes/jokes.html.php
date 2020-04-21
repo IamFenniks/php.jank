@@ -51,6 +51,8 @@
                                     <tr><td colspan="3"><?php for($i = 0; $i <= 24; $i++){ echo '-';} ?></tr></td>
                                 <?php endforeach; ?>
                             </table>
+                        <?php else: ?>
+                            <?php echo $error; ?>
                         <?php endif; ?>
 
                         <hr>

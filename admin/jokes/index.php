@@ -291,27 +291,34 @@
             // 'SELECT id, joketext FROM jokes WHERE TRUE AND author_id = :author_id'
         }
 
-        if($_GET['category']){// Категория выбрана
+        if($_GET['category'] != ''){// Категория выбрана
             $from .= ' INNER JOIN joke_category ON id = joke_id';
             $where .= ' AND category_id = :category_id';
             $placeholders[':category_id'] = $_GET['category']; // $placeholders = array(:author_id, :category_id);
-            // SELECT id, joketext FROM jokes INNER JOIN joke_categoty WHERE TRUE AND categot_id = :category_id);
+            // SELECT id, joketext FROM jokes INNER JOIN joke_categoty WHERE TRUE AND author_id = authorid' AND categot_id = category_id);
+            if($placeholders[$_GET['category']] == 0){
+                $error = "У автора нет шуток в этой категории";
+            }
         }
 
         if($_GET['text'] != ''){
             $where .= ' AND joketext LIKE :joke_text';
             $placeholders[':joke_text'] = '%' . $_GET['text'] . '%'; // $placeholders = array(:author_id, :category_id, :joke_text);
-            /* SELECT id, joketext
-                FROM jokes
+            /* SELECT id, joketext FROM jokes
                 INNER JOIN joke_categoty ON id = joke_id
                 WHERE TRUE
+                    AND author_id = :author_id
                     AND categot_id = :category_id
-                    AND joketext   LIKE :joke_text);
+                    AND joketext LIKE :joke_text);
             */
+            if($placeholders[$_GET['text']] == 0){
+                $error = "Ни одна из шуток не соответствует введённой Вами фразе!";
+            }
         }
 
         // Формируем и выводим шутки
         try{
+            // $sql =
             $sql = $select . $from . $where;
             $s = $pdo->prepare($sql);
             $s->execute($placeholders);
