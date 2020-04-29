@@ -60,6 +60,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                         </form>
 
                         <p><a href="../index.php">Вернуться на Главную</a></p>
+                        <?php include '../logout.inc.html.php'; ?>
                     </div>
                 </div>
             </div>

@@ -36,6 +36,7 @@
                     <?php endforeach; ?>
                 </table>
                 <p><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/addjoke/index.php">Вернуться на Главную страницу</a></p>
+                <p><?php include '../logout.inc.html.php'; ?></p>
             </div>
         </div>
     </div>

@@ -24,12 +24,13 @@
                                 <textarea name="text" id="text" cols="40" rows="3"><?php htmlout($text); ?></textarea>
                             </div>
 
+
                             <br>
 
                             <div>
-                                <label for="name">Автор:</label>
-                                <select name="author" id="author">
-                                    <option value="">Выбрать</option>
+                                    <label for="name">Автор:</label>
+                                    <select name="author" id="author">
+                                        <option value="">Выбрать</option>
 
                                     <?php foreach($authors as $author): ?>
                                         <option value="<?php htmlout($author['id']); ?>" <?php

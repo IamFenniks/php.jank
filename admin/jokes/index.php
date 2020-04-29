@@ -6,6 +6,21 @@
  * Time: 14:37
  */
 
+// ================( Блок авторизации Редактора сайта )=====================
+
+include $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
+
+if(!userIsLoggedIn()){
+    include '../login.html.php';
+    exit();
+}
+
+if(!userHasRole('Редактор')){
+    $error = 'Доступ к этой странице имеет только "Редактор" сайт';
+    include '../accessdenied.html.php';
+    exit();
+}
+
     // ========================== Блок добавления шуток ============================= //
 
     if(isset($_GET['add'])){

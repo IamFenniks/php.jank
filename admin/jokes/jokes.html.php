@@ -59,6 +59,7 @@
 
                         <p><a href="?">Искать заново</a></p>
                         <p><a href="../index.php">Вернуться на Главную</a></p>
+                        <p><?php include '../logout.inc.html.php'; ?></p>
                     </div>
                 </div>
             </div>

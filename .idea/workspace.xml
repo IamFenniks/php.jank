@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18166a93-0daa-42d6-8312-664540bdb2d7" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/admin/accessdenied.html.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/login.html.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/logout.inc.html.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/access.inc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopcart/cart.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopcart/cart.html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopcart/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/shopcart/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/authors/authors.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/authors/authors.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/authors/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/authors/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/categories/categories.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/categories/categories.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/categories/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/categories/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/jokes/form.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/jokes/form.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/jokes/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/jokes/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/jokes/jokes.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/jokes/jokes.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/jokes/searchform.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/jokes/searchform.html.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,29 +25,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="access.inc.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/access.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="8" selection-start-line="8" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/shopcart/index.php">
+        <entry file="file://$PROJECT_DIR$/admin/authors/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cart.html.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shopcart/cart.html.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="61" column="41" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="catalog.html.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shopcart/catalog.html.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="56" column="52" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="122" />
+            <state relative-caret-position="119">
+              <caret line="12" column="18" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -86,12 +87,7 @@
         <option value="$PROJECT_DIR$/admin/index.html.php" />
         <option value="$PROJECT_DIR$/admin/authors/form.html.php" />
         <option value="$PROJECT_DIR$/admin/categories/form.html.php" />
-        <option value="$PROJECT_DIR$/admin/categories/index.php" />
         <option value="$PROJECT_DIR$/admin/nav.html.php" />
-        <option value="$PROJECT_DIR$/admin/categories/categories.html.php" />
-        <option value="$PROJECT_DIR$/admin/authors/authors.html.php" />
-        <option value="$PROJECT_DIR$/admin/jokes/form.html.php" />
-        <option value="$PROJECT_DIR$/admin/authors/index.php" />
         <option value="$PROJECT_DIR$/admin/confirmation.html.php" />
         <option value="$PROJECT_DIR$/connect/output.html.php" />
         <option value="$PROJECT_DIR$/testing_file.php" />
@@ -102,12 +98,21 @@
         <option value="$PROJECT_DIR$/cookiecounter/welcom.html.php" />
         <option value="$PROJECT_DIR$/cookiecounter/index.php" />
         <option value="$PROJECT_DIR$/assets/nav.html.php" />
-        <option value="$PROJECT_DIR$/admin/jokes/jokes.html.php" />
-        <option value="$PROJECT_DIR$/admin/jokes/searchform.html.php" />
-        <option value="$PROJECT_DIR$/admin/jokes/index.php" />
         <option value="$PROJECT_DIR$/shopcart/catalog.html.php" />
         <option value="$PROJECT_DIR$/shopcart/cart.html.php" />
         <option value="$PROJECT_DIR$/shopcart/index.php" />
+        <option value="$PROJECT_DIR$/admin/jokes/index.php" />
+        <option value="$PROJECT_DIR$/admin/categories/index.php" />
+        <option value="$PROJECT_DIR$/admin/accessdenied.html.php" />
+        <option value="$PROJECT_DIR$/admin/jokes/form.html.php" />
+        <option value="$PROJECT_DIR$/admin/login.html.php" />
+        <option value="$PROJECT_DIR$/admin/logout.inc.html.php" />
+        <option value="$PROJECT_DIR$/admin/jokes/searchform.html.php" />
+        <option value="$PROJECT_DIR$/admin/jokes/jokes.html.php" />
+        <option value="$PROJECT_DIR$/admin/categories/categories.html.php" />
+        <option value="$PROJECT_DIR$/admin/authors/authors.html.php" />
+        <option value="$PROJECT_DIR$/includes/access.inc.php" />
+        <option value="$PROJECT_DIR$/admin/authors/index.php" />
       </list>
     </option>
   </component>
@@ -134,6 +139,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -144,13 +150,40 @@
             <path>
               <item name="php.jank" type="b2602c69:ProjectViewProjectNode" />
               <item name="php.jank" type="462c0819:PsiDirectoryNode" />
-              <item name="shopcart" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php.jank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php.jank" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="authors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php.jank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php.jank" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="categories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php.jank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php.jank" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="jokes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php.jank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php.jank" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php.jank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php.jank" type="462c0819:PsiDirectoryNode" />
+              <item name="wellcome" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -158,7 +191,7 @@
     <property name="last_opened_file_path" value="D:/Обучение/МКБ 13/Кевин Янк - PHP и MySQL. От новичка к профессионалу [2013, PDF, RUS] + Code/PHPMYSQL5-master/chapter7/admin/jokes/index.php" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -218,18 +251,19 @@
       <workItem from="1587037170731" duration="6215000" />
       <workItem from="1587278172874" duration="8011000" />
       <workItem from="1587372295152" duration="12836000" />
-      <workItem from="1587450403415" duration="17324000" />
+      <workItem from="1587450403415" duration="18224000" />
+      <workItem from="1588145101093" duration="12143000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199439000" />
+    <option name="totallyTimeSpent" value="212482000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12518302" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1420205" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -262,35 +296,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/addjoke/form.html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addjoke/jokes.html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="93" lean-forward="true" selection-start-line="16" selection-start-column="93" selection-end-line="16" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addjoke/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addjoke/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/index.php" />
     <entry file="file://$PROJECT_DIR$/jokes.sql" />
     <entry file="file://$PROJECT_DIR$/wellcome/wellcome.html.php" />
     <entry file="file://$PROJECT_DIR$/addjoke/output.html.php">
@@ -339,13 +344,6 @@
     <entry file="file://$PROJECT_DIR$/addjoke/error.html.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/head.html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addjoke/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
@@ -360,13 +358,6 @@
     <entry file="file://$PROJECT_DIR$/../phpschool/pages/guitarwars/remove_score.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/categories/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/categories/form.html.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -376,20 +367,6 @@
     </entry>
     <entry file="file://D:/Обучение/МКБ 13/Кевин Янк - PHP и MySQL. От новичка к профессионалу [2013, PDF, RUS] + Code/PHPMYSQL5-master/chapter7/jokes/index.php" />
     <entry file="file://$PROJECT_DIR$/admin/nav.html.php" />
-    <entry file="file://$PROJECT_DIR$/admin/categories/categories.html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/authors/authors.html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/authors/form.html.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -402,20 +379,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/authors/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="101" column="40" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/jokes/form.html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="74" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="74" />
         </state>
       </provider>
     </entry>
@@ -487,54 +450,128 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cookiecounter/welcom.html.php" />
-    <entry file="file://$PROJECT_DIR$/admin/jokes/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="314" column="81" selection-start-line="314" selection-start-column="81" selection-end-line="314" selection-end-column="81" />
-          <folding>
-            <element signature="e#188#1477#0#PHP" />
-            <element signature="e#1547#3347#0#PHP" />
-            <element signature="e#3494#6054#0#PHP" />
-            <element signature="e#6107#8501#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/jokes/jokes.html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="54" column="49" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/jokes/searchform.html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shopcart/catalog.html.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="867">
           <caret line="56" column="52" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="122" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shopcart/cart.html.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
+        <state relative-caret-position="952">
           <caret line="61" column="41" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shopcart/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+        <state relative-caret-position="17">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/accessdenied.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wellcome/form.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/head.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/jokes/form.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="24" column="34" lean-forward="true" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/jokes/searchform.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="62" column="61" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/jokes/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/categories/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/jokes/jokes.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="61" column="64" selection-start-line="61" selection-start-column="64" selection-end-line="61" selection-end-column="64" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/categories/categories.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="38" column="56" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/authors/authors.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="39" column="64" lean-forward="true" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/logout.inc.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="32" column="79" selection-start-line="32" selection-start-column="79" selection-end-line="32" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#5#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/login.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/access.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" selection-start-line="8" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/authors/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="18" />
         </state>
       </provider>
     </entry>
