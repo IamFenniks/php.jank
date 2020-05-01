@@ -26,7 +26,7 @@
                 <h1>Доступ запрещён!</h1>
 
                 <p><?php htmlout($error); ?></p>
-                <p><a href="login.html.php">Авторизоваться</a></p>
+                <p><a href="">Авторизоваться</a></p>
             </div>
         </div>
     </div>

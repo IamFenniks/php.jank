@@ -8,7 +8,7 @@
 
 // ================( Блок авторизации администратора учетных записей  )=====================
 
-include $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
 
 if(!userIsLoggedIn()){
     include '../login.html.php';
@@ -20,7 +20,6 @@ if(!userHasRole('Администратор учётных записей')){
     include '../accessdenied.html.php';
     exit();
 }
-
 // ==========================( Блок добления авторов  )=====================
 
 if (isset($_GET['add'])){

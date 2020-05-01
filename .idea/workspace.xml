@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18166a93-0daa-42d6-8312-664540bdb2d7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/accessdenied.html.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/login.html.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/logout.inc.html.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/access.inc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/authors/authors.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/authors/authors.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addjoke/error.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/addjoke/error.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/accessdenied.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/accessdenied.html.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/authors/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/authors/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/categories/categories.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/categories/categories.html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/categories/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/categories/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/jokes/form.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/jokes/form.html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/jokes/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/jokes/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/jokes/jokes.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/jokes/jokes.html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/jokes/searchform.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/jokes/searchform.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/login.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/access.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/access.inc.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,17 +21,56 @@
       <file leaf-file-name="access.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/access.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="8" selection-start-line="8" selection-end-line="9" />
+            <state relative-caret-position="-476">
+              <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.html.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/login.html.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-119">
+              <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="16" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="access.inc.php" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Обучение/МКБ 13/Кевин Янк - PHP и MySQL. От новичка к профессионалу [2013, PDF, RUS] + Code/PHPMYSQL5-master/chapter9/includes/access.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="557">
+              <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/authors/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="12" column="18" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="18" />
+            <state relative-caret-position="187">
+              <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+              <folding>
+                <element signature="e#6#87#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accessdenied.html.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/accessdenied.html.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="authors.html.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/authors/authors.html.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="39" column="64" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -54,6 +86,8 @@
       <find>$_SERVER['DOCUMENT_ROOT'] . '/db.inc.php';</find>
       <find>searchform</find>
       <find>$author_id</find>
+      <find>Ошибка поиск</find>
+      <find>user</find>
     </findStrings>
     <replaceStrings>
       <replace>$_SERVER['DOCUMENT_ROOT'] . 'includes</replace>
@@ -91,7 +125,6 @@
         <option value="$PROJECT_DIR$/admin/confirmation.html.php" />
         <option value="$PROJECT_DIR$/connect/output.html.php" />
         <option value="$PROJECT_DIR$/testing_file.php" />
-        <option value="$PROJECT_DIR$/includes/db.inc.php" />
         <option value="$PROJECT_DIR$/includes/helpers.inc.php" />
         <option value="$PROJECT_DIR$/addjoke/jokes.html.php" />
         <option value="$PROJECT_DIR$/cookiecounter/cookiecounter.html.php" />
@@ -103,16 +136,18 @@
         <option value="$PROJECT_DIR$/shopcart/index.php" />
         <option value="$PROJECT_DIR$/admin/jokes/index.php" />
         <option value="$PROJECT_DIR$/admin/categories/index.php" />
-        <option value="$PROJECT_DIR$/admin/accessdenied.html.php" />
         <option value="$PROJECT_DIR$/admin/jokes/form.html.php" />
-        <option value="$PROJECT_DIR$/admin/login.html.php" />
         <option value="$PROJECT_DIR$/admin/logout.inc.html.php" />
         <option value="$PROJECT_DIR$/admin/jokes/searchform.html.php" />
         <option value="$PROJECT_DIR$/admin/jokes/jokes.html.php" />
         <option value="$PROJECT_DIR$/admin/categories/categories.html.php" />
         <option value="$PROJECT_DIR$/admin/authors/authors.html.php" />
+        <option value="$PROJECT_DIR$/includes/db.inc.php" />
+        <option value="$PROJECT_DIR$/admin/login.html.php" />
         <option value="$PROJECT_DIR$/includes/access.inc.php" />
+        <option value="$PROJECT_DIR$/addjoke/error.html.php" />
         <option value="$PROJECT_DIR$/admin/authors/index.php" />
+        <option value="$PROJECT_DIR$/admin/accessdenied.html.php" />
       </list>
     </option>
   </component>
@@ -126,10 +161,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1376" />
-    <option name="height" value="754" />
+    <option name="x" value="673" />
+    <option name="width" value="694" />
+    <option name="height" value="745" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -139,7 +173,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,40 +191,19 @@
               <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="authors" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="php.jank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="php.jank" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="categories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="php.jank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="php.jank" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="jokes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="php.jank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="php.jank" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="php.jank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="php.jank" type="462c0819:PsiDirectoryNode" />
-              <item name="wellcome" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/Обучение/МКБ 13/Кевин Янк - PHP и MySQL. От новичка к профессионалу [2013, PDF, RUS] + Code/PHPMYSQL5-master/chapter7/admin/jokes/index.php" />
+    <property name="last_opened_file_path" value="D:/Обучение/МКБ 13/Кевин Янк - PHP и MySQL. От новичка к профессионалу [2013, PDF, RUS] + Code/PHPMYSQL5-master/chapter9/includes/access.inc.php" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -253,17 +265,18 @@
       <workItem from="1587372295152" duration="12836000" />
       <workItem from="1587450403415" duration="18224000" />
       <workItem from="1588145101093" duration="12143000" />
+      <workItem from="1588263372437" duration="6311000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212482000" />
+    <option name="totallyTimeSpent" value="218793000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1376" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1420205" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28455883" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -296,7 +309,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jokes.sql" />
     <entry file="file://$PROJECT_DIR$/wellcome/wellcome.html.php" />
     <entry file="file://$PROJECT_DIR$/addjoke/output.html.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -340,9 +352,6 @@
           <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addjoke/error.html.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/addjoke/index.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -393,13 +402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="47" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/db.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -471,13 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/accessdenied.html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wellcome/form.html.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -524,9 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
           <caret line="61" column="64" selection-start-line="61" selection-start-column="64" selection-end-line="61" selection-end-column="64" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -537,41 +529,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/logout.inc.html.php" />
     <entry file="file://$PROJECT_DIR$/admin/authors/authors.html.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="39" column="64" lean-forward="true" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
+        <state relative-caret-position="357">
+          <caret line="39" column="64" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/logout.inc.html.php">
+    <entry file="file://$PROJECT_DIR$/includes/db.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="32" column="79" selection-start-line="32" selection-start-column="79" selection-end-line="32" selection-end-column="79" />
-          <folding>
-            <element signature="e#0#5#0#PHP" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/login.html.php">
+    <entry file="file://D:/Обучение/МКБ 13/Кевин Янк - PHP и MySQL. От новичка к профессионалу [2013, PDF, RUS] + Code/PHPMYSQL5-master/chapter9/includes/access.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+        <state relative-caret-position="557">
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addjoke/error.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="42" selection-start-column="42" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/access.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" selection-start-line="8" selection-end-line="9" />
+        <state relative-caret-position="-476">
+          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/login.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="16" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/authors/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="18" />
+        <state relative-caret-position="187">
+          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/accessdenied.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
         </state>
       </provider>
     </entry>
