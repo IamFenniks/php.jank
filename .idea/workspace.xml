@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18166a93-0daa-42d6-8312-664540bdb2d7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/authors/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/authors/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/login.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/logout.inc.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/logout.inc.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/access.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/access.inc.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +19,17 @@
       <file leaf-file-name="access.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/access.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+            <state relative-caret-position="101">
+              <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/categories/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -25,8 +37,8 @@
       <file leaf-file-name="login.html.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/login.html.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="16" selection-end-column="11" />
+            <state relative-caret-position="289">
+              <caret line="48" column="65" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -34,11 +46,20 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/authors/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+            <state relative-caret-position="238">
+              <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
               <folding>
                 <element signature="e#6#87#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logout.inc.html.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/logout.inc.html.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="492">
+              <caret line="34" lean-forward="true" selection-start-line="33" selection-end-line="34" />
             </state>
           </provider>
         </entry>
@@ -48,15 +69,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
               <caret line="36" column="69" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" selection-start-column="19" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -130,20 +142,20 @@
         <option value="$PROJECT_DIR$/shopcart/cart.html.php" />
         <option value="$PROJECT_DIR$/shopcart/index.php" />
         <option value="$PROJECT_DIR$/admin/jokes/index.php" />
-        <option value="$PROJECT_DIR$/admin/categories/index.php" />
         <option value="$PROJECT_DIR$/admin/jokes/form.html.php" />
-        <option value="$PROJECT_DIR$/admin/logout.inc.html.php" />
         <option value="$PROJECT_DIR$/admin/jokes/searchform.html.php" />
         <option value="$PROJECT_DIR$/admin/jokes/jokes.html.php" />
         <option value="$PROJECT_DIR$/admin/categories/categories.html.php" />
         <option value="$PROJECT_DIR$/admin/authors/authors.html.php" />
         <option value="$PROJECT_DIR$/includes/db.inc.php" />
-        <option value="$PROJECT_DIR$/admin/login.html.php" />
-        <option value="$PROJECT_DIR$/includes/access.inc.php" />
         <option value="$PROJECT_DIR$/addjoke/error.html.php" />
-        <option value="$PROJECT_DIR$/admin/authors/index.php" />
         <option value="$PROJECT_DIR$/admin/accessdenied.html.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/admin/login.html.php" />
+        <option value="$PROJECT_DIR$/admin/categories/index.php" />
+        <option value="$PROJECT_DIR$/includes/access.inc.php" />
+        <option value="$PROJECT_DIR$/admin/authors/index.php" />
+        <option value="$PROJECT_DIR$/admin/logout.inc.html.php" />
       </list>
     </option>
   </component>
@@ -175,6 +187,17 @@
             <path>
               <item name="php.jank" type="b2602c69:ProjectViewProjectNode" />
               <item name="php.jank" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php.jank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php.jank" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="php.jank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="php.jank" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="categories" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -251,12 +274,12 @@
       <workItem from="1587450403415" duration="18224000" />
       <workItem from="1588145101093" duration="12143000" />
       <workItem from="1588263372437" duration="6311000" />
-      <workItem from="1588508980240" duration="303000" />
+      <workItem from="1588508980240" duration="9463000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219096000" />
+    <option name="totallyTimeSpent" value="228256000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -486,13 +509,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/categories/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/jokes/jokes.html.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
@@ -507,7 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/logout.inc.html.php" />
     <entry file="file://$PROJECT_DIR$/admin/authors/authors.html.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -530,32 +545,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/access.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/login.html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/authors/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.some.html.swp">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/accessdenied.html.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -564,10 +562,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/admin/login.html.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        <state relative-caret-position="289">
+          <caret line="48" column="65" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/access.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/categories/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/authors/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/logout.inc.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="34" lean-forward="true" selection-start-line="33" selection-end-line="34" />
         </state>
       </provider>
     </entry>

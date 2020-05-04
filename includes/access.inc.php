@@ -26,7 +26,7 @@ function userIsLoggedIn(){
             unset($_SESSION['logedIn']);
             unset($_SESSION['email']);
             unset($_SESSION['password']);
-            $GLOBALS['loginError'] = 'Указан неверный адре электронной почты или пароль';
+            $GLOBALS['loginError'] = 'Указан неверный адрес электронной почты или пароль';
             return false;
         }
     }
@@ -76,21 +76,19 @@ function userHasRole($role){
         $sql = "SELECT COUNT(*) FROM author 
                 INNER JOIN author_role ON author.author_id = author_role.author_id 
                 INNER JOIN role ON role_id = id 
-                WHERE author_email = :email AND role.id = :roleid";
+                WHERE author_email = :email AND id = :roleId";
         $s = $pdo->prepare($sql);
         $s->bindValue(':email', $_SESSION['email']);
-        $s->bindValue(':roleid', $role);
+        $s->bindValue(':roleId', $role);
         $s->execute();
     }catch (PDOException $e){
-        $error = 'Ошибка при поиске ролей, назначенных автору.';
-        include '../addjoke/error.html.php';
+        $error = 'Ошибка при поиске ролей, назначенных автору.' . $e->getMessage();
+        include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
         exit();
     }
 
     $row = $s->fetch();
-    if($row[0] > 0){
-        return true;
-    }else{
-        return false;
-    }
+    if($row[0] > 0) return true;
+    else return false;
 }
+

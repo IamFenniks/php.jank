@@ -47,7 +47,7 @@
 
                             <div>
                                 <input type="hidden" name="action" value="login">
-                                <input class="btn btn-worning" type="submit" value="Войти">
+                                <input type="submit" class="btn btn-worning" value="Войти">
                             </div>
                         </form>
 

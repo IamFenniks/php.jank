@@ -10,10 +10,10 @@
 
 include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
 
-if(!userIsLoggedIn()){
-    include '../login.html.php';
-    exit();
-}
+if(!userIsLoggedIn()) {              // Если( заходим в файл доступа обращаемся к функции ПОЛЬЗОВАТЕЛЬ НЕ ОПРЕДЕЛЕН, ТО...
+    include '../login.html.php';    // ПОСЫЛАЕМ В ФОРМУ
+    exit();                         // ВЫХОДИМ
+}                                   // ВСЕ ОК ИДЕМ ДАЛЕЕ
 
 if(!userHasRole('Администратор учётных записей')){
     $error = 'Доступ к этой странице имеет только "Администратор учётных записей"';

@@ -8,21 +8,10 @@
      include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
  ?>
 
-<!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <?php
-        $title = 'Выйти';
-        include $_SERVER['DOCUMENT_ROOT'] . '/assets/head.html.php';
-        ?>
-    </head>
-
-    <body>
-        <main class="container">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="main">
-                        <?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/nav.html.php';?>
+                    <div class="logout">
                         <h1>Выйти</h1>
 
                         <p>Пожалуйста выйдете из системы, если Вы завершили сегодня работу</p>
@@ -39,12 +28,7 @@
                     </div>
                 </div>
             </div>
-        </main>
-        <br><hr>
+        </div>
 
-        <footer>
-            <?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/footer.html.php'; ?>
-        </footer>
-    </body>
 </html>
 
