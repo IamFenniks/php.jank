@@ -7,6 +7,10 @@
         $title = 'Управление авторами';
         include $_SERVER['DOCUMENT_ROOT'] . '/assets/head.html.php';
     ?>
+    <style type="text/css">
+        form>div{position: relative;}
+        form>div>span{position: absolute; right: 0; float: right;}
+    </style>
 </head>
 
 <body>
@@ -22,15 +26,17 @@
                 <ul>
                     <?php foreach($authors as $author): ?>
                         <li>
-                            <form action="" method="post">
+                            <form action="" method="post" class="col-md-5">
                                 <div>
                                     <?php htmlout($author['name']); ?>
 
                                     <input type="hidden" name="name" value="<?php htmlout($author['name']); ?>">
                                     <input type="hidden" name="id" value="<?php  echo $author['id'];?>">
+                                    <span>
+                                        <input type="submit" name="action" value="Редактировать">
+                                        <input type="submit" name="action" value="Удалить">
+                                    </span>
 
-                                    <input type="submit" name="action" value="Редактировать">
-                                    <input type="submit" name="action" value="Удалить">
                                 </div>
                             </form>
                         </li>

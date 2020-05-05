@@ -7,6 +7,10 @@
         $title = $_SERVER['DOCUMENT_ROOT'] . '/' . $pageTitle;
         include $_SERVER['DOCUMENT_ROOT'] . '/assets/head.html.php';
     ?>
+    <style type="text/css">
+        form>div{position: relative;}
+        form>div>label>input{position: absolute; right: 0;}
+    </style>
 </head>
 
 <body>
@@ -17,7 +21,7 @@
                 <?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/nav.html.php';?>
                         <h1><?php htmlout($pageTitle); ?></h1>
 
-                        <form action="?<?php htmlout($action); ?>" method="post">
+                        <form action="?<?php htmlout($action); ?>" method="post" class="col-md-4">
                             <div>
                                 <label for="name">Имя:
                                     <input type="text" id="name" name="name" value="<?php htmlout($name); ?>">
@@ -38,7 +42,7 @@
 
                             <fieldset>
                                 <legend>Роли:</legend>
-                                <?php for($i = 0; $i < count($role); $i++): ?>
+                                <?php for($i = 0; $i < count($roles); $i++): ?>
                                     <div>
                                         <label for="role<?php echo $i; ?>">
                                             <input type="checkbox"
@@ -46,7 +50,7 @@
                                                    id="role<?php echo $i; ?>"
                                                    value="<?php htmlout($roles[$i]['id']); ?>"
                                                     <?php
-                                                        if($roles[$i]['checked']) echo ' checked';
+                                                        if($roles[$i]['selected']) echo ' checked';
                                                     ?>
                                             >
                                             <?php htmlout($roles[$i]['id']); ?>
