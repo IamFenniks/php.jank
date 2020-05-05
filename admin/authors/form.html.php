@@ -23,11 +23,40 @@
                                     <input type="text" id="name" name="name" value="<?php htmlout($name); ?>">
                                 </label>
                             </div>
+
                             <div>
                                 <label for="email">Почта:
                                     <input type="text" id="email" name="email" value="<?php htmlout($email); ?>">
                                 </label>
                             </div>
+
+                            <div>
+                                <label for="password">Задать пароль:
+                                    <input type="password" id="password" name="password">
+                                </label>
+                            </div>
+
+                            <fieldset>
+                                <legend>Роли:</legend>
+                                <?php for($i = 0; $i < count($role); $i++): ?>
+                                    <div>
+                                        <label for="role<?php echo $i; ?>">
+                                            <input type="checkbox"
+                                                   name="roles[]"
+                                                   id="role<?php echo $i; ?>"
+                                                   value="<?php htmlout($roles[$i]['id']); ?>"
+                                                    <?php
+                                                        if($roles[$i]['checked']) echo ' checked';
+                                                    ?>
+                                            >
+                                            <?php htmlout($roles[$i]['id']); ?>
+                                        </label>
+                                        <?php htmlout($description[$i]['description']); ?>
+                                    </div>
+                                <?php endfor; ?>
+
+                            </fieldset>
+
                             <div>
                                 <input type="hidden" name="id" value="<?php htmlout($id); ?>">
 

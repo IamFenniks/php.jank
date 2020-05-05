@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 29 2020 г., 19:15
+-- Время создания: Май 04 2020 г., 09:51
 -- Версия сервера: 8.0.15
 -- Версия PHP: 7.1.22
 
@@ -41,7 +41,7 @@ CREATE TABLE `author` (
 
 INSERT INTO `author` (`author_id`, `author_name`, `author_email`, `password`) VALUES
 (1, 'Кевин Янк', 'thatguy@kevin_yank.com', 'cf4031e33086538be631fb542512cddd'),
-(3, 'Джоан Смит', 'jsmith@mail.com', NULL);
+(3, 'Джоан Смит', 'jsmith@mail.com', 'aba0050decd05ae68b7fe09206fddadc');
 
 -- --------------------------------------------------------
 
@@ -59,7 +59,8 @@ CREATE TABLE `author_role` (
 --
 
 INSERT INTO `author_role` (`author_id`, `role_id`) VALUES
-(1, ' Администратор учётных записей');
+(1, 'Администратор учётных записей'),
+(3, 'Администратор сайта');
 
 -- --------------------------------------------------------
 
