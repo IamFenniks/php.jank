@@ -32,7 +32,7 @@
                                         </a>)
 
                                         <input type="hidden" name="id" value="<?php echo $joke['id'] ; ?>">
-                                        <input type="submit" value="Удалить">
+<!--                                        <input type="submit" value="Удалить">-->
                                     </p>
                                 </blockquote>
                             </form>

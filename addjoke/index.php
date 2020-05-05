@@ -1,4 +1,46 @@
 <?php
+    if(isset($_GET['addjoke'])){
+        include '../includes/access.inc.php';
+
+        if (!userIsLoggedIn()){
+            $text = 'В целях безопасности Вы должны авторизоваться:';
+            $flag = true;
+
+            include '../admin/login.html.php';
+            exit();
+        }
+
+        include 'form.html.php';
+        exit();
+    }
+
+    // Регитрация пользователей как авторов
+    if(isset($_GET['registr'])){
+        include '../registr.inc.html.php';
+        exit();
+    }
+
+    // Обработка формы регистрации
+    if (isset($_POST['action']) and $_POST['action'] == 'registr'){
+
+        if(!isset($_POST['name']) or $_POST['name'] == '' or
+            !isset($_POST['email']) or $_POST['email'] == ''){
+
+        }
+
+        include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+
+        try{
+            $sql = '';
+        }catch (PDOException $e) {
+            $error = 'Ошибка добавления пользователя' . $e->getMessage();
+            include 'error.html.php';
+            exit();
+        }
+    }
+
+
+    // Выводим шутки
     include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
     try{
@@ -79,8 +121,3 @@
     include 'output.html.php';
 
     include 'jokes.html.php';
-
-    if(isset($_GET['addjoke'])){
-        include 'form.html.php';
-        exit();
-    }

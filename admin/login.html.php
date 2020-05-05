@@ -14,6 +14,10 @@
         $title = 'Войти';
         include $_SERVER['DOCUMENT_ROOT'] . '/assets/head.html.php';
         ?>
+        <style type="text/css">
+            form>div{position: relative;}
+            form>div>label>input{position: absolute; right: 0;}
+        </style>
     </head>
 
     <body>
@@ -24,13 +28,14 @@
                         <?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/nav.html.php';?>
                         <h1>Войти</h1>
 
-                        <p>Пожалуйста войдите в систему, чтобы просмотреть страницу, к которой Вы обратились</p>
+                        <p><strong><?php echo $text; ?></strong></p>
 
+                        <hr>
                         <?php if(isset($loginError)): ?>
                             <p><?php htmlout($loginError); ?></p>
                         <?php endif; ?>
 
-                        <form action="" method="post">
+                        <form action="" method="post" class="col-md-4">
                             <div>
                                 <label for="email">
                                     Email:
@@ -47,9 +52,18 @@
 
                             <div>
                                 <input type="hidden" name="action" value="login">
-                                <input type="submit" class="btn btn-worning" value="Войти">
+                                <input type="submit" class="btn btn-warning" value="Войти">
                             </div>
+
+                            <?php if($flag): ?>
+                                <hr>
+                                <p><strong>Или, если Вы гость, Вы должны зарегистрировться</strong></p>
+
+                                <a href="?registr" class="btn btn-warning">Регистрация</a>
+                            <?php endif; ?>
                         </form>
+
+
 
                         <p><a href="/admin/">Вернуться на Главную страницу</a></p>
                     </div>

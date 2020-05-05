@@ -11,6 +11,7 @@
 include $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
 
 if(!userIsLoggedIn()){
+    $text = 'Пожалуйста войдите в систему, чтобы редактировать страницу, к которой Вы обратились';
     include '../login.html.php';
     exit();
 }
