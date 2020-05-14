@@ -15,7 +15,9 @@
                 <div class="col-md-12">
                     <div class="main">
                         <?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/nav.html.php';?>
+
                         <p><a href="?addjoke">Добавьте собственную шутку</a></p>
+
                         <p>Вот все шутки, которые есть в Базе Данных:</p>
 
                         <?php foreach($jokes as $i => $joke): ?>

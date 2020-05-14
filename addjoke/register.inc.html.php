@@ -5,6 +5,8 @@
  * Date: 05.05.2020
  * Time: 23:14
  */
+
+include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
 ?>
 <!doctype html>
 <html lang="ru">
@@ -27,16 +29,23 @@
                         <?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/nav.html.php';?>
                         <h2>Регистрация</h2>
 
+                        <p><?php echo $text; ?></p>
+
+                        <hr>
+                        <?php if(isset($regError)): ?>
+                            <p><?php htmlout($regError); ?></p>
+                        <?php endif; ?>
+
                         <form action="" method="post" class="col-md-4">
                             <div>
                                 <label for="name">Ваше имя:
-                                    <input type="text" id="name" name="name" placeholder="Андрей Андреев">
+                                    <input type="text" id="name" name="name">
                                 </label>
                             </div>
 
                             <div>
                                 <label for="email">Ваш ящик:
-                                    <input type="text" id="name" name="name" placeholder="andrei@mail.com">
+                                    <input type="email" id="email" name="email">
                                 </label>
                             </div>
 
@@ -51,7 +60,7 @@
                                 </label>
                             </div>
                             <div>
-                                <input type="hidden" name="action" value="registr">
+                                <input type="hidden" name="action" value="reg_form">
                                 <input type="submit" value="Регистрация" class="btn btn-success">
                             </div>
                         </form>

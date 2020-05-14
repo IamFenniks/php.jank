@@ -6,6 +6,7 @@
  * Time: 11:35
  */
 
+
 function userIsLoggedIn(){
     if(isset($_POST['action']) and $_POST['action'] == 'login'){
         if(!isset($_POST['email']) or $_POST['email'] == '' or
@@ -92,3 +93,10 @@ function userHasRole($role){
     else return false;
 }
 
+function userRegistration(){
+    if(isset($_POST['name']) and $_POST['name'] == ''){
+        $text = 'Вы не ввели своё имя';
+        include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/register.inc.html.php';
+        exit();
+    }
+}

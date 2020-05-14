@@ -57,9 +57,9 @@
 
                             <?php if($flag): ?>
                                 <hr>
-                                <p><strong>Или, если Вы гость, Вы должны зарегистрировться</strong></p>
+                                <p><strong>Если Вы гость, Вы должны зарегистрировться</strong></p>
 
-                                <a href="?registr" class="btn btn-warning">Регистрация</a>
+                                <a href="?to_reg" class="btn btn-warning">Регистрация</a>
                             <?php endif; ?>
                         </form>
 

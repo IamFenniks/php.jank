@@ -1,46 +1,5 @@
 <?php
-    if(isset($_GET['addjoke'])){
-        include '../includes/access.inc.php';
-
-        if (!userIsLoggedIn()){
-            $text = 'В целях безопасности Вы должны авторизоваться:';
-            $flag = true;
-
-            include '../admin/login.html.php';
-            exit();
-        }
-
-        include 'form.html.php';
-        exit();
-    }
-
-    // Регитрация пользователей как авторов
-    if(isset($_GET['registr'])){
-        include '../registr.inc.html.php';
-        exit();
-    }
-
-    // Обработка формы регистрации
-    if (isset($_POST['action']) and $_POST['action'] == 'registr'){
-
-        if(!isset($_POST['name']) or $_POST['name'] == '' or
-            !isset($_POST['email']) or $_POST['email'] == ''){
-
-        }
-
-        include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
-
-        try{
-            $sql = '';
-        }catch (PDOException $e) {
-            $error = 'Ошибка добавления пользователя' . $e->getMessage();
-            include 'error.html.php';
-            exit();
-        }
-    }
-
-
-    // Выводим шутки
+    // ========================== Выводим шутки Старт ===================//
     include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
     try{
@@ -54,17 +13,18 @@
         exit();
     }
 
-    try{
-        $sql = "UPDATE jokes SET jokedate = '2012-04-01' " .
-            "WHERE joketext LIKE '%цыплёнок%'";
-        $effected_rows = $pdo->exec($sql);
+    while ($row = $result->fetch()){
+        $jokes[] = array(
+            'id' => $row['id'],
+            'text' => $row['joketext'],
+            'auth_name' => $row['author_name'],
+            'auth_email' => $row['author_email']);
     }
-    catch(PDOException $e){
-        $error = 'Невозможно подключиться к серверу Баз Данных!' . $e->getMessage();
-        include 'error.html.php';
-        exit();
-    }
+    // ========================== Выводим шутки Конец ===================//
 
+
+    // ========================== Добавляем шутки Старт ===================//
+    //
     if(isset($_POST['joketext'])){
         include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
@@ -87,16 +47,10 @@
         header('Location: .');
         exit();
     }
+    // ========================== Добавляем шутки Конец ===================//
 
 
-    while ($row = $result->fetch()){
-        $jokes[] = array(
-            'id' => $row['id'],
-            'text' => $row['joketext'],
-            'auth_name' => $row['author_name'],
-            'auth_email' => $row['author_email']);
-    }
-
+    // ========================== Удаляем шутки Старт ===================//
     if(isset($_GET['delete_joke'])){
         $_SERVER['DOCUMENT_ROOT'] . '/db.inc.php';
 
@@ -115,9 +69,62 @@
         header('Location: .');
         exit();
     }
+    // ========================== Удаляем шутки Конец ===================//
 
-    $output = 'Соединение с Базой Данных установлено!<br>' .
-        'Обновлено ' . $effected_rows . '.<br><hr>';
-    include 'output.html.php';
+
+    // ========================== Регитсрация Старт ===================//
+    // Если сработала кнопка "Добавить собственную шутку"
+    if(isset($_GET['addjoke'])){
+        include '../includes/access.inc.php';
+
+        if (!userIsLoggedIn()){
+            $text = 'В целях безопасности Вы должны авторизоваться:';
+            $flag = true; // Указывается если это простой пользователь
+
+            include '../admin/login.html.php';
+            exit();
+        }
+
+
+        include 'form.html.php';
+        exit();
+    }
+
+
+    // Обработка формы регистрации
+    if (isset($_POST['action']) and $_POST['action'] == 'reg_form'){
+        include $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
+
+        userRegistration();
+
+        $flag = false;
+        include $_SERVER['DOCUMENT_ROOT'] . '/admin/login.html.php';
+    }
+
+    if(isset($_GET['to_reg'])){
+        $text = 'Заполните все поля данной формы';
+        include 'register.inc.html.php';
+        exit();
+    }
+    // Регитрация пользователей как авторов
+
+    // ========================== Регитсрация Конец ===================//
+
+
 
     include 'jokes.html.php';
+/*
+ * $output = 'Соединение с Базой Данных установлено!<br>' .
+        'Обновлено ' . $effected_rows . '.<br><hr>';
+    include 'output.html.php';
+ *
+ * try{
+   $sql = "UPDATE jokes SET jokedate = '2012-04-01' " .
+       "WHERE joketext LIKE '%цыплёнок%'";
+   $effected_rows = $pdo->exec($sql);
+}
+catch(PDOException $e){
+   $error = 'Невозможно подключиться к серверу Баз Данных!' . $e->getMessage();
+   include 'error.html.php';
+   exit();
+}*/
