@@ -95,8 +95,28 @@ function userHasRole($role){
 
 function userRegistration(){
     if(isset($_POST['name']) and $_POST['name'] == ''){
-        $text = 'Вы не ввели своё имя';
-        include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/register.inc.html.php';
+        $GLOBALS['nameError'] = 'Вы не ввели своё имя';
+        return false;
+    }
+    elseif(isset($_POST['email']) and $_POST['email'] == ''){
+        $GLOBALS['emailError'] = 'Вы не ввели имя Вашей електронной почты';
+        return false;
+    }
+    if(isset($_POST['password1']) and $_POST['password1'] == ''){
+        $GLOBALS['password1Error'] = 'Вы не ввели Пароль';
+        return false;
         exit();
     }
+    elseif(isset($_POST['password2']) and $_POST['password2'] == ''){
+        $GLOBALS['password2Error'] = 'Вы не подтвердили Пароль';
+        return false;
+        exit();
+    }
+    elseif(isset($_POST['password1']) and isset($_POST['password2']) and $_POST['password1'] != $_POST['password2']){
+        $GLOBALS['passError'] = 'Пароли не совпадают';
+        return false;
+        exit();
+    }
+
+    return true;
 }

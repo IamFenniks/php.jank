@@ -18,6 +18,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
         <style type="text/css">
             form>div{position: relative;}
             form>div>label>input{position: absolute; right: 0;}
+            .error{color: coral;}
         </style>
     </head>
 
@@ -32,20 +33,23 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                         <p><?php echo $text; ?></p>
 
                         <hr>
-                        <?php if(isset($regError)): ?>
-                            <p><?php htmlout($regError); ?></p>
-                        <?php endif; ?>
 
                         <form action="" method="post" class="col-md-4">
                             <div>
                                 <label for="name">Ваше имя:
                                     <input type="text" id="name" name="name">
+                                    <?php if(isset($nameError)): ?>
+                                        <p class="error"><?php htmlout($nameError); ?></p>
+                                    <?php endif; ?>
                                 </label>
                             </div>
 
                             <div>
                                 <label for="email">Ваш ящик:
                                     <input type="email" id="email" name="email">
+                                    <?php if(isset($emailError)): ?>
+                                        <p class="error"><?php htmlout($emailError); ?></p>
+                                    <?php endif; ?>
                                 </label>
                             </div>
 
@@ -58,6 +62,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                                 <label for="password2">Подтвердить пароль:
                                     <input type="password" id="password2" name="password2">
                                 </label>
+
+                                <?php if(isset($passError)): ?>
+                                    <p class="error"><?php htmlout($passError); ?></p>
+                                <?php endif; ?>
                             </div>
                             <div>
                                 <input type="hidden" name="action" value="reg_form">

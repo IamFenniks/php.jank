@@ -95,7 +95,11 @@
     if (isset($_POST['action']) and $_POST['action'] == 'reg_form'){
         include $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
 
-        userRegistration();
+        if(!userRegistration()){
+            $text = 'Ошибка ввода даннх';
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/register.inc.html.php';
+            exit();
+        }
 
         $flag = false;
         include $_SERVER['DOCUMENT_ROOT'] . '/admin/login.html.php';
@@ -110,21 +114,4 @@
 
     // ========================== Регитсрация Конец ===================//
 
-
-
     include 'jokes.html.php';
-/*
- * $output = 'Соединение с Базой Данных установлено!<br>' .
-        'Обновлено ' . $effected_rows . '.<br><hr>';
-    include 'output.html.php';
- *
- * try{
-   $sql = "UPDATE jokes SET jokedate = '2012-04-01' " .
-       "WHERE joketext LIKE '%цыплёнок%'";
-   $effected_rows = $pdo->exec($sql);
-}
-catch(PDOException $e){
-   $error = 'Невозможно подключиться к серверу Баз Данных!' . $e->getMessage();
-   include 'error.html.php';
-   exit();
-}*/

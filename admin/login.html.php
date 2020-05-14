@@ -31,9 +31,6 @@
                         <p><strong><?php echo $text; ?></strong></p>
 
                         <hr>
-                        <?php if(isset($loginError)): ?>
-                            <p><?php htmlout($loginError); ?></p>
-                        <?php endif; ?>
 
                         <form action="" method="post" class="col-md-4">
                             <div>
@@ -60,12 +57,16 @@
                                 <p><strong>Если Вы гость, Вы должны зарегистрировться</strong></p>
 
                                 <a href="?to_reg" class="btn btn-warning">Регистрация</a>
+                                <hr>
+                                <p><a href="index.php">Вернуться на Главную страницу</a></p>
                             <?php endif; ?>
                         </form>
 
 
-
-                        <p><a href="/admin/">Вернуться на Главную страницу</a></p>
+                        <?php if(!$flag): ?>
+                            <hr>
+                            <p><a href="/admin/">Вернуться на Главную страницу</a></p>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
