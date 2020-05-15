@@ -6,7 +6,6 @@
  * Time: 11:35
  */
 
-
 function userIsLoggedIn(){
     if(isset($_POST['action']) and $_POST['action'] == 'login'){
         if(!isset($_POST['email']) or $_POST['email'] == '' or
@@ -94,27 +93,37 @@ function userHasRole($role){
 }
 
 function userRegistration(){
-    if(isset($_POST['name']) and $_POST['name'] == ''){
-        $GLOBALS['nameError'] = 'Вы не ввели своё имя';
+    if(isset($_POST['name'])      and $_POST['name'] == ''      or
+       isset($_POST['email'])     and $_POST['email'] == ''     or
+       isset($_POST['password1']) and $_POST['password1'] == '' or
+       isset($_POST['password2']) and $_POST['password2'] == '' or
+       $_POST['password1'] != $_POST['password2']){
+        if($_POST['name'] == ''){
+            $GLOBALS['nameError'] = 'Вы не ввели своё имя';
+        }
+        if($_POST['email'] == '') {
+            $GLOBALS['emailError'] = 'Вы не ввели имя Вашей електронной почты';
+        }
+        if($_POST['password1'] == ''){
+            $GLOBALS['password1Error'] = 'Вы не ввели Пароль';
+            return false;
+        }
+        else if($_POST['password2'] == ''){
+            $GLOBALS['password2Error'] = 'Вы не подтвердили Пароль';
+            return false;
+        }
+        else if($_POST['password1'] != $_POST['password2']){
+            $GLOBALS['passError'] = 'Пароли не совпадают';
+           return false;
+        }
         return false;
     }
-    elseif(isset($_POST['email']) and $_POST['email'] == ''){
-        $GLOBALS['emailError'] = 'Вы не ввели имя Вашей електронной почты';
-        return false;
-    }
-    if(isset($_POST['password1']) and $_POST['password1'] == ''){
-        $GLOBALS['password1Error'] = 'Вы не ввели Пароль';
-        return false;
-        exit();
-    }
-    elseif(isset($_POST['password2']) and $_POST['password2'] == ''){
-        $GLOBALS['password2Error'] = 'Вы не подтвердили Пароль';
-        return false;
-        exit();
-    }
-    elseif(isset($_POST['password1']) and isset($_POST['password2']) and $_POST['password1'] != $_POST['password2']){
-        $GLOBALS['passError'] = 'Пароли не совпадают';
-        return false;
+
+    $password = md5($_POST['password1'] . 'ijdb');
+    if(databaseContainsAuthor($_POST['email'], $password)){
+        $regError = 'Пользователь с таким email и паролем уже зарегистрирован';
+        $flag = true;
+        include $_SERVER['DOCUMENT_ROOT'] . '/admin/login.html.php';
         exit();
     }
 

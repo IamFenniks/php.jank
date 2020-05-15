@@ -90,11 +90,11 @@
         exit();
     }
 
-
     // Обработка формы регистрации
     if (isset($_POST['action']) and $_POST['action'] == 'reg_form'){
         include $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
 
+        // Проверяем
         if(!userRegistration()){
             $text = 'Ошибка ввода даннх';
             include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/register.inc.html.php';
@@ -103,6 +103,16 @@
 
         $flag = false;
         include $_SERVER['DOCUMENT_ROOT'] . '/admin/login.html.php';
+        exit();
+    }
+    if(isset($_POST['action']) and $_POST['action'] == 'login'){
+        include $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
+        if(!userIsLoggedIn()){
+            $text = 'Ошибка ввода даннх';
+            $flag = true;
+            include $_SERVER['DOCUMENT_ROOT'] . '/admin/login.html.php';
+            exit();
+        }
     }
 
     if(isset($_GET['to_reg'])){

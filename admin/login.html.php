@@ -15,8 +15,10 @@
         include $_SERVER['DOCUMENT_ROOT'] . '/assets/head.html.php';
         ?>
         <style type="text/css">
+            .error{color: coral;}
             form>div{position: relative;}
-            form>div>label>input{position: absolute; right: 0;}
+            form>div>label>input{position: absolute; right: 0; width: 70%;}
+            form>div>a:last-child{position: absolute; right: 0;}
         </style>
     </head>
 
@@ -32,7 +34,15 @@
 
                         <hr>
 
-                        <form action="" method="post" class="col-md-4">
+                        <?php if(isset($loginError)): ?>
+                            <p class="error"><?php htmlout($loginError); ?></p>
+                        <?php endif; ?>
+
+                        <?php if(isset($regError)): ?>
+                            <p class="error"><?php htmlout($regError); ?></p>
+                        <?php endif; ?>
+
+                        <form action="" method="post" class="col-md-5">
                             <div>
                                 <label for="email">
                                     Email:
@@ -47,21 +57,17 @@
                                 </label>
                             </div>
 
+                            <br>
                             <div>
                                 <input type="hidden" name="action" value="login">
                                 <input type="submit" class="btn btn-warning" value="Войти">
+
+                                <?php if($flag): ?>
+                                    <a href="?forgot_pass" class="btn btn-danger">Забыли пароль?</a>
+                                    <a href="?to_reg" class="btn btn-warning">Регистрация</a>
+                                <?php endif; ?>
                             </div>
-
-                            <?php if($flag): ?>
-                                <hr>
-                                <p><strong>Если Вы гость, Вы должны зарегистрировться</strong></p>
-
-                                <a href="?to_reg" class="btn btn-warning">Регистрация</a>
-                                <hr>
-                                <p><a href="index.php">Вернуться на Главную страницу</a></p>
-                            <?php endif; ?>
                         </form>
-
 
                         <?php if(!$flag): ?>
                             <hr>

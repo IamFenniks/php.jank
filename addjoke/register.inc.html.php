@@ -37,7 +37,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                         <form action="" method="post" class="col-md-4">
                             <div>
                                 <label for="name">Ваше имя:
-                                    <input type="text" id="name" name="name">
+                                    <input type="text" id="name" name="name" value="">
                                     <?php if(isset($nameError)): ?>
                                         <p class="error"><?php htmlout($nameError); ?></p>
                                     <?php endif; ?>
@@ -62,6 +62,14 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                                 <label for="password2">Подтвердить пароль:
                                     <input type="password" id="password2" name="password2">
                                 </label>
+
+                                <?php if(isset($password1Error)): ?>
+                                    <p class="error"><?php htmlout($password1Error); ?></p>
+                                <?php endif; ?>
+
+                                <?php if(isset($password2Error)): ?>
+                                    <p class="error"><?php htmlout($password2Error); ?></p>
+                                <?php endif; ?>
 
                                 <?php if(isset($passError)): ?>
                                     <p class="error"><?php htmlout($passError); ?></p>
