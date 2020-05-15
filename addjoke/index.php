@@ -27,16 +27,19 @@
     //
     if(isset($_POST['joketext'])){
         include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
-
+        session_start();
+        $authorId = $_SESSION['author_id'];
         try{
             $joketext = $_POST['joketext'];
 
             $sql = 'INSERT INTO jokes SET 
                 joketext = :joketext,
+                author_id = :authorId,
                 jokedate = CURDATE()';
 
             $s = $pdo->prepare($sql);
             $s->bindValue(':joketext', $_POST['joketext']);
+            $s->bindValue(':authorId', $authorId);
             $s->execute();
         }
         catch(PDOException $e){
