@@ -15,6 +15,7 @@
         include $_SERVER['DOCUMENT_ROOT'] . '/assets/head.html.php';
         ?>
         <style type="text/css">
+            .success{color: lightgreen;}
             .error{color: coral;}
             form>div{position: relative;}
             form>div>label>input{position: absolute; right: 0; width: 70%;}
@@ -40,6 +41,10 @@
 
                         <?php if(isset($regError)): ?>
                             <p class="error"><?php htmlout($regError); ?></p>
+                        <?php endif; ?>
+
+                        <?php if(isset($regSuccess)): ?>
+                            <p class="success"><?php htmlout($regSuccess); ?></p>
                         <?php endif; ?>
 
                         <form action="" method="post" class="col-md-5">

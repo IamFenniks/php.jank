@@ -94,13 +94,33 @@
     if (isset($_POST['action']) and $_POST['action'] == 'reg_form'){
         include $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
 
-        // Проверяем
+        // Проверяем корректность ввода данных и не существует ли уже похожий автор
         if(!userRegistration()){
             $text = 'Ошибка ввода даннх';
             include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/register.inc.html.php';
             exit();
         }
 
+        $name = $_POST['name'];
+        $pass = md5($_POST['password1'] . 'ijdb');
+        include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+        try{
+           $sql = 'INSERT INTO author SET 
+                  author_name = :name, 
+                  author_email = :email,
+                  password = :password';
+           $s = $pdo->prepare($sql);
+           $s->bindValue(':name', $name);
+           $s->bindValue(':email', $_POST['email']);
+           $s->bindValue(':password', $pass);
+           $s->execute();
+        }catch (PDOException $e){
+            $error = 'Ошибка добавления вновь зарегин пользователя в БД<br>' . $e->getMessage();
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
+
+        $text = "Поздравляем Вас, $name! Вы успешно зарегистрировались.";
         $flag = false;
         include $_SERVER['DOCUMENT_ROOT'] . '/admin/login.html.php';
         exit();

@@ -127,5 +127,7 @@ function userRegistration(){
         exit();
     }
 
+    $name = $_POST['name'];
+    $GLOBALS['regSuccess'] = "Предлагаем Вам войти для авторизации. Спасибо, $name.";
     return true;
 }
