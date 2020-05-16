@@ -27,15 +27,31 @@
     //
     if(isset($_POST['joketext'])){
         include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+        include $_SERVER['DOCUMENT_ROOT'] . '/includes/access.inc.php';
+
         session_start();
-        $authorId = $_SESSION['author_id'];
+        try{
+            $sql = 'SELECT * FROM author WHERE author_email = :email AND password = :password';
+            $s = $pdo->prepare($sql);
+            $s->bindValue(':email', $_SESSION['email']);
+            $s->bindValue(':password', $_SESSION['password']);
+            $s->execute();
+        }catch(PDOException $e){
+            $error =  'Ошибка поиска id автора. <br>' . $e->getMessage();
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
+        while($row = $s->fetch()){
+            $authorId = $row['author_id'];
+        }
+
         try{
             $joketext = $_POST['joketext'];
 
             $sql = 'INSERT INTO jokes SET 
-                joketext = :joketext,
-                author_id = :authorId,
-                jokedate = CURDATE()';
+            joketext = :joketext,
+            author_id = :authorId,
+            jokedate = CURDATE()';
 
             $s = $pdo->prepare($sql);
             $s->bindValue(':joketext', $_POST['joketext']);
@@ -47,6 +63,7 @@
             include 'error.html.php';
             exit();
         }
+
         header('Location: .');
         exit();
     }

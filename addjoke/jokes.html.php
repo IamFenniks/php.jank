@@ -28,13 +28,13 @@
                                             echo ++$i . '. ';
                                             markdownout($joke['text']);
                                         ?>
-                                        <br>
                                         (автор: <a href="mailto:<?php htmlout($joke['auth_email'])?>">
                                             <?php htmlout($joke['auth_name'])?>
                                         </a>)
 
                                         <input type="hidden" name="id" value="<?php echo $joke['id'] ; ?>">
 <!--                                        <input type="submit" value="Удалить">-->
+                                        <br>
                                     </p>
                                 </blockquote>
                             </form>

@@ -15,6 +15,7 @@ function userIsLoggedIn(){
         }
 
         $password = md5($_POST['password'] . 'ijdb');
+
         if(databaseContainsAuthor($_POST['email'], $password)){
             session_start();
             $_SESSION['logedIn'] = true;
@@ -131,3 +132,4 @@ function userRegistration(){
     $GLOBALS['regSuccess'] = "Предлагаем Вам войти для авторизации. Спасибо, $name.";
     return true;
 }
+
