@@ -3,12 +3,13 @@
     include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
     try{
-        $sql = 'SELECT id, joketext, author_name, author_email ' .
-            'FROM jokes INNER JOIN author ' .
-            'ON jokes.author_id = author.author_id';
+        $sql = "SELECT id, joketext, author_name, author_email 
+                FROM jokes INNER JOIN author 
+                ON jokes.author_id = author.author_id 
+                WHERE visible = 'YES'";
         $result = $pdo->query($sql);
     }catch (PDOException $e){
-        $error = 'Ошибка при извлечении шуток' . $e->getMessage();
+        $error = 'Ошибка при извлечении шуток<br>' . $e->getMessage();
         include 'error.html.php';
         exit();
     }
