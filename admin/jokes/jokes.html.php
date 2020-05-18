@@ -16,6 +16,7 @@
             $title = 'Управление шутками: результаты поиска.';
             include $_SERVER['DOCUMENT_ROOT'] . '/assets/head.html.php';
         ?>
+        <style type="text/css">.error{color: coral;} .success{color: lightgreen;}</style>
     </head>
 
     <body>
@@ -44,6 +45,9 @@
 
                                                     <input type="submit" name="action" value="Редактировать">
                                                     <input type="submit" name="action" value="Удалить">
+                                                    <?php if($joke['visibility'] == 'NO'): ?>
+                                                        <span class="error">На модерацию</span>
+                                                    <?php endif; ?>
                                                 </div>
                                             </form>
                                         </td>

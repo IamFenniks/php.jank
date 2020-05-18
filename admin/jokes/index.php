@@ -22,8 +22,7 @@ if(!userHasRole('Редактор')){
     exit();
 }
 
-    // ========================== Блок добавления шуток ============================= //
-
+// ========================== Блок добавления шуток Start============================= //
     if(isset($_GET['add'])){
         $pageTitle = 'Новая шутка';
         $action = 'addform';
@@ -114,17 +113,15 @@ if(!userHasRole('Редактор')){
         header('Location: .');
         exit();
     }
+// ========================== Блок добавления шуток End============================= //
 
-
-
-    // ============================ Блок редактирования шуток ====================== //
-
+// ============================ Блок редактирования шуток Start====================== //
     // Отправка данных в форму для редактирования
     if(isset($_POST['action']) and $_POST['action'] == 'Редактировать'){
         include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
         try{
-            $sql = 'SELECT id, joketext, author_id FROM jokes WHERE id = :id';
+            $sql = 'SELECT id, joketext, author_id, visible FROM jokes WHERE id = :id';
             $s = $pdo->prepare($sql);
             $s->bindValue(':id', $_POST['id']);
             $s->execute();
@@ -141,6 +138,7 @@ if(!userHasRole('Редактор')){
         $text = $row['joketext'];
         $author_id = $row['author_id'];
         $id = $row['id'];
+        $visible = $row['visible'];
         $button = 'Обновить шутку';
 
         //Формируем список всех авторов
@@ -174,19 +172,30 @@ if(!userHasRole('Редактор')){
 
         // Формируем список всех категорий
         try{
-            $result = $pdo->query('SELECT id, category_name FROM category');
+            $result2 = $pdo->query('SELECT id, category_name FROM category');
         }catch (PDOException $e){
             $error = 'Ошибка извлечения категорий' . $e->getMessage();
             include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
             exit();
         }
 
-        foreach ($result as $row){
+        foreach ($result2 as $row){
             $categories[] = array(
                 'id' => $row['id'],
                 'name' => $row['category_name'],
                 'selected' => in_array($row['id'], $selectedCategories));
         }
+
+        // Формируем модерацию
+        try{
+            $result3 = $pdo->query('SELECT visible FROM jokes');
+        }catch (PDOException $e){
+            $error = 'Ошибка извлечения видимости шуток' . $e->getMessage();
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
+
+        $visibility = $row['visible'];
 
         include 'form.html.php';
         exit();
@@ -254,11 +263,10 @@ if(!userHasRole('Редактор')){
         header('Location: .');
         exit();
     }
+// ============================ Блок редактирования шуток Ebd====================== //
 
 
-
-    // ============================ Блок удаления шуток =======================
-
+// ============================ Блок удаления шуток Start========================== //
     if(isset($_POST['action']) and $_POST['action'] == 'Удалить'){
         include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
@@ -287,16 +295,14 @@ if(!userHasRole('Редактор')){
         header('Location: .');
         exit();
     }
+// ============================ Блок удаления шуток End ========================== //
 
-
-
-    // ============================ Блок интеграции ===========================
-
+// ============================ Блок интеграции Start ============================ //
     if(isset($_GET['action']) && $_GET['action'] == 'search'){
         include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
         // Базовое выражение SELECT
-        $select = 'SELECT id, joketext';
+        $select = 'SELECT id, joketext, visible';
         $from   = ' FROM jokes';
         $where  = ' WHERE TRUE';
 
@@ -345,15 +351,15 @@ if(!userHasRole('Редактор')){
         }
 
         foreach($s as $row){
-            $jokes[] = array('id' => $row['id'], 'text' => $row['joketext']);
+            $jokes[] = array('id' => $row['id'], 'text' => $row['joketext'], 'visibility' => $row['visible']);
         }
 
         include 'jokes.html.php';
         exit();
     }
+// ============================ Блок интеграции End ============================ //
 
-    // ============================= A SEARCH FORM =================================
-
+// ============================= A SEARCH FORM ================================= //
     // Выводим форму поиска
     include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 

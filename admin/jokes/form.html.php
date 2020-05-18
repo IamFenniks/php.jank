@@ -23,15 +23,11 @@
                                 <label for="text"><?php echo $label; ?></label>
                                 <textarea name="text" id="text" cols="40" rows="3"><?php htmlout($text); ?></textarea>
                             </div>
-
-
                             <br>
-
                             <div>
-                                    <label for="name">Автор:</label>
-                                    <select name="author" id="author">
-                                        <option value="">Выбрать</option>
-
+                                <label for="name">Автор:</label>
+                                <select name="author" id="author">
+                                    <option value="">Выбрать</option>
                                     <?php foreach($authors as $author): ?>
                                         <option value="<?php htmlout($author['id']); ?>" <?php
                                             if($author['id'] == $author_id){ // from jokes
@@ -56,6 +52,16 @@
                                         </label>
                                     </div>
                                 <?php endforeach; ?>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Публикация:</legend>
+                                    <div><label for="visibility">
+                                            <input type="checkbox" name="visibility" id="visibility" value="<?php htmlout($visibility); ?>"
+                                                <?php if($visibility == 'YES') echo ' checked'; ?>>
+                                            <?php htmlout($visibility); ?>
+                                        </label>
+                                    </div>
                             </fieldset>
 
                             <div>

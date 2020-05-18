@@ -46,6 +46,7 @@
             $authorId = $row['author_id'];
         }
 
+        // Добавляем новую шутку в БД
         try{
             $joketext = $_POST['joketext'];
 
@@ -61,6 +62,23 @@
         }
         catch(PDOException $e){
             echo 'Ошибка запроса к БД. Добавление шутки' . $e->getMessage();
+            include 'error.html.php';
+            exit();
+        }
+
+        // Добавляем id новой шутки в промежуточную таблицу
+        $jokeID = $pdo->lastInsertId();
+        try{
+            $sql = 'INSERT INTO joke_category SET 
+                    joke_id = :joke_id,
+                    category_id = :category_id';
+            $s = $pdo->prepare($sql);
+            $s->bindValue(':joke_id', $jokeID);
+            $s->bindValue(':category_id', 1);
+            $s->execute();
+        }
+        catch(PDOException $e){
+            echo 'Ошибка запроса к БД. Добавление id шутки и id категории в joke_category' . $e->getMessage();
             include 'error.html.php';
             exit();
         }
