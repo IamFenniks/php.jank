@@ -31,29 +31,37 @@ include $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
                             <p>Вывести шутки, которые удовлетворяют следующим критериям:</p>
 
                             <div>
-                                <label for="author">По автору:</label>
-                                <select name="author" id="author">
-                                    <option value="">Любой автор</option>
-                                    <?php foreach($authors as $author): ?>
-                                        <option value="<?php htmlout($author['id']); ?>">
-                                            <?php htmlout($author['name']); ?>
-                                        </option>
-                                    <?php endforeach; ?>
-                                </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div>
+                                    <label for="author">По автору:</label>
+                                    <select name="author" id="author">
+                                        <option value="">Любой автор</option>
+                                        <?php foreach($authors as $author): ?>
+                                            <option value="<?php htmlout($author['id']); ?>">
+                                                <?php htmlout($author['name']); ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>&nbsp;&nbsp;&nbsp;&nbsp;
 
-                                <label for="category">По категории:</label>
-                                <select name="category" id="category">
-                                    <option value="">Любая категория</option>
-                                    <?php foreach($categories as $category): ?>
-                                        <option value="<?php htmlout($category['id']); ?>">
-                                            <?php htmlout($category['name']); ?>
-                                        </option>
-                                    <?php endforeach; ?>
-                                </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <label for="category">По категории:</label>
+                                    <select name="category" id="category">
+                                        <option value="">Любая категория</option>
+                                        <?php foreach($categories as $category): ?>
+                                            <option value="<?php htmlout($category['id']); ?>">
+                                                <?php htmlout($category['name']); ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
 
-                                <label for="text">Содержит текст:</label>
-                                <input type="text" id="text" name="text">
-                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <div>
+                                    <input type="checkbox" name="visibility" value="YES" checked> Опубликованные
+                                    <input type="checkbox" name="visibility" value="NO"> Не опубликованные
+                                </div><div>
+                                    <label for="text">Содержит текст:</label>
+                                    <input type="text" id="text" name="text">
+                                </div>
+
+
                                 <input type="hidden" name="action"  value="search">
                                 <input type="submit" value="Искать" class="btn btn-warning">
                             </div>

@@ -7,7 +7,7 @@
         $title = $_SERVER['DOCUMENT_ROOT'] . '/' . $pageTitle;
         include $_SERVER['DOCUMENT_ROOT'] . '/assets/head.html.php';
         ?>
-        <style type="text/css">textarea{display: block; width: 100%;}</style>
+        <style type="text/css">textarea{display: block; width: 100%;} .success{color: chartreuse;} .error{color: coral;} </style>
     </head>
 
     <body>
@@ -56,14 +56,21 @@
 
                             <fieldset>
                                 <legend>Публикация:</legend>
-                                    <div><label for="visibility">
-                                            <input type="checkbox" name="visibility" id="visibility" value="<?php htmlout($visibility); ?>"
-                                                <?php if($visibility == 'YES') echo ' checked'; ?>>
-                                            <?php htmlout($visibility); ?>
-                                        </label>
+                                    <div>
+                                            <?php if($visibility == 'YES'):?>
+                                                <input type="radio" name="visibility" value="YES" checked>
+                                                <span class="success">Опубликовано</span>
+
+                                                <input type="radio" name="visibility" value="NO"> В черновики
+                                            <?php else:?>
+                                                <input type="radio" name="visibility" value="YES" > Публиковать
+
+                                                <input type="radio" name="visibility" value="NO" checked>
+                                                <span class="error">Не опубликовано</span>
+                                            <?php endif;?>
                                     </div>
                             </fieldset>
-
+                            <br>
                             <div>
                                 <input type="hidden" name="id" value="<?php htmlout($id); ?>">
 

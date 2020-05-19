@@ -154,7 +154,7 @@ if(!userHasRole('Редактор')){
             $authors[] = array('id' => $row['author_id'], 'name' => $row['author_name']);
         }
 
-        // Формируем список категорий выбранной шутки
+        // Формируем список категорий  к которым относится выбранная шутка
         try{
             $sql = 'SELECT category_id FROM joke_category WHERE joke_id = :id';
             $s = $pdo->prepare($sql);
@@ -188,13 +188,16 @@ if(!userHasRole('Редактор')){
 
         // Формируем модерацию
         try{
-            $result3 = $pdo->query('SELECT visible FROM jokes');
+            $sql = 'SELECT visible FROM jokes WHERE id = :id';
+            $result3 = $pdo->prepare($sql);
+            $result3->bindValue(':id', $_POST['id']);
+            $result3->execute();
         }catch (PDOException $e){
             $error = 'Ошибка извлечения видимости шуток' . $e->getMessage();
             include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
             exit();
         }
-
+        $row = $result3->fetch();
         $visibility = $row['visible'];
 
         include 'form.html.php';
@@ -207,6 +210,19 @@ if(!userHasRole('Редактор')){
 
         if($_POST['author'] == ''){
             $error = 'Вы не указали автора шутки. Вернитесь назад.';
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
+
+        // Обновляем публикацию ушток
+        $visibility = $_POST['visibility'];
+        try{
+            $sql = "UPDATE jokes SET visible = '$visibility'  WHERE id = :id";
+            $s = $pdo->prepare($sql);
+            $s->bindValue(':id', $_POST['id']);
+            $s->execute();
+        }catch (PDOException $e){
+            $error = 'Ошибка добавления измененых шуток' . $e->getMessage();
             include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
             exit();
         }
@@ -306,6 +322,13 @@ if(!userHasRole('Редактор')){
         $from   = ' FROM jokes';
         $where  = ' WHERE TRUE';
 
+        if($_GET['visibility'] == 'YES'){
+            $where .= " AND visible = 'YES'";
+        }
+        if($_GET['visibility'] == 'NO'){
+            $where .= " AND visible = 'NO'";
+        }
+
         $placeholders = array();
         if($_GET['author'] != ''){ // Автор выбран
             $where .= ' AND author_id = :author_id'; // from "jokes"-table
@@ -388,6 +411,19 @@ if(!userHasRole('Редактор')){
     foreach ($result as $row){
         $categories[] = array('id' => $row['id'], 'name' => $row['category_name']);
     }
+
+//Получаем видимость шуток
+try{
+    $result = $pdo->query('SELECT visible FROM jokes');
+}catch (PDOException $e){
+    $error = 'Ошибка извлечения категорий' . $e->getMessage();
+    include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+    exit();
+}
+
+foreach ($result as $row){
+    $visibility[] = $row['visible'];
+}
 
     $pageTitle = 'Управление шутками';
     include 'searchform.html.php';
