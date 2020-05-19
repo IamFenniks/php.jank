@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 18 2020 г., 21:56
--- Версия сервера: 8.0.19
--- Версия PHP: 7.4.4
+-- Время создания: Май 19 2020 г., 22:44
+-- Версия сервера: 8.0.15
+-- Версия PHP: 7.1.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -28,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `author` (
-  `author_id` int NOT NULL,
+  `author_id` int(11) NOT NULL,
   `author_name` varchar(255) DEFAULT NULL,
   `author_email` varchar(255) DEFAULT NULL,
   `password` char(32) DEFAULT NULL
@@ -50,7 +51,7 @@ INSERT INTO `author` (`author_id`, `author_name`, `author_email`, `password`) VA
 --
 
 CREATE TABLE `author_role` (
-  `author_id` int NOT NULL,
+  `author_id` int(11) NOT NULL,
   `role_id` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -72,7 +73,7 @@ INSERT INTO `author_role` (`author_id`, `role_id`) VALUES
 --
 
 CREATE TABLE `category` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `category_name` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -95,10 +96,10 @@ INSERT INTO `category` (`id`, `category_name`) VALUES
 --
 
 CREATE TABLE `jokes` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `joketext` text,
   `jokedate` date NOT NULL,
-  `author_id` int NOT NULL,
+  `author_id` int(11) NOT NULL,
   `visible` enum('NO','YES') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -107,12 +108,12 @@ CREATE TABLE `jokes` (
 --
 
 INSERT INTO `jokes` (`id`, `joketext`, `jokedate`, `author_id`, `visible`) VALUES
-(1, 'В Новый Год всё сбывается, даже то, что в другое время сбыть не удаётся.', '2020-03-15', 1, 'YES'),
+(1, 'В Новый Год всё сбывается, даже то, что в другое время сбыть не удаётся.', '2020-03-15', 1, 'NO'),
 (2, 'Хочешь петь - ПЕЙ!', '2020-03-18', 1, 'YES'),
-(3, 'Если хочешь быть ЗДОРОВ, будь здоров!', '2020-05-17', 2, 'YES'),
+(3, 'Если хочешь быть ЗДОРОВ, будь здоров!', '2020-05-17', 2, 'NO'),
 (4, 'Шути - не шути, один хрен в конце концов, дошутишься.', '2020-05-17', 2, 'YES'),
-(5, 'Зачем цыплёнок перешёл дорогу? Чтобы попасть на другую сторону.', '2020-05-17', 3, 'NO'),
-(6, 'Адвокатом быть не легко. Легко бить адвоката.', '2020-05-17', 3, 'NO');
+(5, 'Зачем цыплёнок перешёл дорогу? Чтобы попасть на другую сторону.', '2020-05-17', 3, 'YES'),
+(6, 'Адвокатом быть не легко. Легко бить адвоката.', '2020-05-17', 3, 'YES');
 
 -- --------------------------------------------------------
 
@@ -121,8 +122,8 @@ INSERT INTO `jokes` (`id`, `joketext`, `jokedate`, `author_id`, `visible`) VALUE
 --
 
 CREATE TABLE `joke_category` (
-  `joke_id` int NOT NULL,
-  `category_id` int NOT NULL
+  `joke_id` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -130,8 +131,10 @@ CREATE TABLE `joke_category` (
 --
 
 INSERT INTO `joke_category` (`joke_id`, `category_id`) VALUES
-(1, 1),
 (1, 5),
+(2, 1),
+(3, 6),
+(4, 1),
 (5, 4),
 (6, 4),
 (6, 5);
@@ -205,19 +208,19 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT для таблицы `author`
 --
 ALTER TABLE `author`
-  MODIFY `author_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `author_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT для таблицы `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `jokes`
 --
 ALTER TABLE `jokes`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
