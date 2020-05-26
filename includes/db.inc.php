@@ -15,3 +15,5 @@
         include 'error.html.php';
         exit();
     }
+
+    define('FOR_WRITE', 10);

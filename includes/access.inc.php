@@ -120,6 +120,9 @@ function userRegistration(){
         return false;
     }
 
+    session_start();
+    $_SESSION['name'] = $_POST['name'];
+
     $password = md5($_POST['password1'] . 'ijdb');
     if(databaseContainsAuthor($_POST['email'], $password)){
         $regError = 'Пользователь с таким email и паролем уже зарегистрирован';

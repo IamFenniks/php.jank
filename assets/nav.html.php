@@ -6,14 +6,22 @@
     <div class="row">
         <div class="col-md-12">
             <div class="header">
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/addjoke/index.php">Home</a></li>
-                        <li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/date/today.php">Date</a></li>
-                        <li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/shopcart/index.php">ShopCart</a></li>
-                        <li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/admin/index.php">Admin</a></li>
-                    </ul>
-                </nav>
+                <div class="row">
+                    <nav class="navbar col-md-10">
+                        <ul>
+                            <li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/index.php">Home</a></li>
+                            <li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/addjoke/index.php">Jokes</a></li>
+                            <li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/date/today.php">Date</a></li>
+                            <li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/shopcart/index.php">ShopCart</a></li>
+                            <li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/admin/index.php">Admin</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="account col-md-2">
+                        <?php echo $author_name; ?>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

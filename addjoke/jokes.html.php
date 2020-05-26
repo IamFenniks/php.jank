@@ -7,6 +7,14 @@
         $title = 'Сегодняшняя дата';
         include $_SERVER['DOCUMENT_ROOT'] . '/assets/head.html.php';
         ?>
+        <style type="text/css">
+            input.up{margin-right: 9px; margin-left: 9px;}
+            input[type="radio"]:before{display: inline-block; position: relative; top: -6px; left: -6px;
+                cursor: pointer; }
+            input.up:before{content: "\2B06"; }
+            input.down:before{content: "\2B07";}
+            input[type="radio"]:active:before{font-size: smaller; left: -3px;}
+        </style>
     </head>
 
     <body>
@@ -32,8 +40,13 @@
                                             <?php htmlout($joke['auth_name'])?>
                                         </a>)
 
+                                        <input type="radio" name="voting" value="up" class="up">
+                                        <input type="radio" name="voting" value="down" class="down">
+
+                                        <span><?php echo $count; ?></span>
+
                                         <input type="hidden" name="id" value="<?php echo $joke['id'] ; ?>">
-<!--                                        <input type="submit" value="Удалить">-->
+                                        <!--<input type="submit" value="Удалить">-->
                                         <br>
                                     </p>
                                 </blockquote>

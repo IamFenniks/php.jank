@@ -6,4 +6,4 @@
  * Time: 10:02
  */
 
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/index.html.php';
+    include $_SERVER['DOCUMENT_ROOT'] . '/index.html.php';

@@ -47,6 +47,26 @@
 //    $text = 'Этот текст содержит курсивное форматирование.';
 //    $output[] = preg_replace('/*([^*]+)*/', '<em>$1</em>', $text);
 
+    $output[] = $_SERVER['GATEWAY_INTERFACE'];
+    $output[] = $_SERVER['SERVER_ADDR'];
+    $output[] = $_SERVER['SERVER_NAME'];
+    $output[] = $_SERVER['SERVER_SOFTWARE'];
+    $output[] = $_SERVER['SERVER_PORT'];
+    $output[] = $_SERVER['SERVER_PROTOCOL'];
+    $output[] = $_SERVER['REQUEST_METHOD'];
+    $output[] = $_SERVER['REQUEST_TIME'];
+    $output[] = $_SERVER['REQUEST_URI'];
+    $output[] = $_SERVER['HTTP_ACCEPT'];
+    $output[] = $_SERVER['HTTP_ACCEPT_CHARSET'];
+    $output[] = $_SERVER['HTTP_ACCEPT_ENCODING'];
+    $output[] = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+    $output[] = $_SERVER['HTTP_USER_AGENT'];
+    $output[] = $_SERVER['REMOTE_ADDR'];
+    $output[] = $_SERVER['REMOTE_USER'];
+    $output[] = $_SERVER['SCRIPT_FILENAME'];
+    $output[] = $_SERVER['SCRIPT_NAME'];
+    $output[] = $_SERVER['SERVER_ADMIN'];
+
     // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
 
     // Подключаем файл вывода сообщения
