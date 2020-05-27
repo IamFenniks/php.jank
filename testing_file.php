@@ -66,6 +66,7 @@
     $output[] = $_SERVER['SCRIPT_FILENAME'];
     $output[] = $_SERVER['SCRIPT_NAME'];
     $output[] = $_SERVER['SERVER_ADMIN'];
+    $output[] = $_SERVER['PHP_AUTH_USER'];
 
     // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
 

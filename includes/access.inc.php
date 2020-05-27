@@ -19,7 +19,7 @@ function userIsLoggedIn(){
         if(databaseContainsAuthor($_POST['email'], $password)){
             session_start();
             $_SESSION['logedIn'] = true;
-            $_SESSION['email'] = $_POST['email'];
+            $GLOBALS['user'] = $_SESSION['email'] = $_POST['email'];
             $_SESSION['password'] = $password;
             return true;
         }else{
@@ -66,7 +66,9 @@ function databaseContainsAuthor($email, $password){
     }
 
     $row = $s->fetch();
-    if($row[0] > 0) return true;
+    if($row[0] > 0) {
+        return true;
+    }
     else return false;
 }
 

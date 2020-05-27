@@ -18,6 +18,7 @@
                     </nav>
 
                     <div class="account col-md-2">
+                        <a href=""><?php echo $user; ?></a>. . .
                         <a href="../admin/dump/index.php">Изменить БД</a>
                     </div>
                 </div>
