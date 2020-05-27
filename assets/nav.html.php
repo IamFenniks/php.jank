@@ -18,7 +18,7 @@
                     </nav>
 
                     <div class="account col-md-2">
-                        <?php echo $author_name; ?>
+                        <a href="../admin/dump/index.php">Изменить БД</a>
                     </div>
                 </div>
 

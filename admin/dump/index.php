@@ -12,3 +12,4 @@ include 'functions.inc.php';
 $tables = get_tables();
 get_dump($tables);
 
+include 'dump.html.php';
