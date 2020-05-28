@@ -4,5 +4,5 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" >
-<link rel="stylesheet" href="<?php echo $_SERVER['DOCUMENT_ROOT']; ?>/assets/main.css">
+<link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT']; ?>/assets/main.css">
 <title><?php echo $title; ?></title>

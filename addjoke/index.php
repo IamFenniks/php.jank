@@ -185,7 +185,19 @@
 
     // ========================== Голосование Старт ===================//
     if(isset($_POST['voting'])){
+        include $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
+        $ip_key = getIP();
 
+        include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+        try{
+            $result = $pdo->query('SELECT INET_NTOA(ip), key FROM userIP 
+                                            INNER JOIN joke_ip ON userIP.id = ip_id 
+                                            INNER JOIN jokes ON joke_id = jokes.id');
+        }catch (PDOException $e){
+            $error = 'Ошибка извлечения IP_KEY<br>' . $e->getMessage();
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
     }
     // ========================== Голосование Конец ===================//
 

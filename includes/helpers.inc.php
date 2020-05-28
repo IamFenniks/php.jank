@@ -64,24 +64,18 @@ function markdownout($text){
     echo markdown2html($text);
 }
 
+function getIP(){
 
+    $keys = [
+        'HTTP_CLIENT_IP',
+        'HTTP_x_FORWARDED_FOR',
+        'REMOTE_ADDR'
+    ];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    foreach ($keys as $key){
+        if(!empty($_SERVER[$key])){
+            $userIP = trim(end(explode(',', $_SERVER[$key])));
+            if(filter_var($userIP, FILTER_VALIDATE_IP)) return $ip_key = [$userIP => $key];
+        }
+    }
+}

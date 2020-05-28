@@ -8,7 +8,14 @@
         include $_SERVER['DOCUMENT_ROOT'] . '/assets/head.html.php';
         ?>
         <style type="text/css">
-            input.up{margin-right: 9px; margin-left: 9px;}
+            input.up{margin-right: 9px;     color: white;
+                margin-left: 9px;
+                background-color: aquamarine;
+                font-size: 16px;}
+            input.down{margin-right: 9px;     color: white;
+                margin-left: 9px;
+                background-color: coral;
+                font-size: 16px;}
             input[type="radio"]:before{display: inline-block; position: relative; top: -6px; left: -6px;
                 cursor: pointer; }
             input.up:before{content: "\2B06"; }
@@ -27,9 +34,9 @@
                         <p><a href="?addjoke">Добавьте собственную шутку</a></p>
 
                         <p>Вот все шутки, которые есть в Базе Данных:</p>
-
+                        <?php print_r($ip_key); ?>
                         <?php foreach($jokes as $i => $joke): ?>
-                            <form action="?delete_joke" method="post">
+                            <form action="?vote" method="post">
                                 <blockquote>
                                     <p>
                                         <?php
@@ -40,8 +47,8 @@
                                             <?php htmlout($joke['auth_name'])?>
                                         </a>)
 
-                                        <input type="radio" name="voting" value="up" class="up">
-                                        <input type="radio" name="voting" value="down" class="down">
+                                        <input type="submit" name="voting" value="&uparrow;" class="up">
+                                        <input type="submit" name="voting" value="&downarrow;" class="down">
 
                                         <span><?php echo $count; ?></span>
 
