@@ -1,4 +1,7 @@
 <?php
+
+    error_reporting();
+
     // ========================== Выводим шутки Старт ===================//
     include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
 
@@ -185,16 +188,32 @@
 
     // ========================== Голосование Старт ===================//
     if(isset($_POST['voting'])){
-        include $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
+        require $_SERVER['DOCUMENT_ROOT'] . '/includes/helpers.inc.php';
         $ip_key = getIP();
 
-        include $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
+        require $_SERVER['DOCUMENT_ROOT'] . '/includes/db.inc.php';
         try{
-            $result = $pdo->query('SELECT INET_NTOA(ip), key FROM userIP 
-                                            INNER JOIN joke_ip ON userIP.id = ip_id 
-                                            INNER JOIN jokes ON joke_id = jokes.id');
+            $sql = $pdo->query('SELECT * FROM userIP');
         }catch (PDOException $e){
             $error = 'Ошибка извлечения IP_KEY<br>' . $e->getMessage();
+            include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+            exit();
+        }
+
+        while ($row = $sql->fetch()){
+            $result[] = array('ip'=> $row['ip'], 'key' => $row['key']);
+            if($result == $ip_key){
+                $error = 'Извините, но Вы уже отдавали голос за эту уштку';
+                include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
+                exit();
+            }
+        }
+
+        try{
+            $sql = 'INSERT INTO userIP(ip, key) 
+                    VALUES ($ip)';
+        }catch (PDOException $e){
+            $error = 'Ошибка добавления IP_KEY<br>' . $e->getMessage();
             include $_SERVER['DOCUMENT_ROOT'] . '/addjoke/error.html.php';
             exit();
         }
